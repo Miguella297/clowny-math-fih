@@ -13,6 +13,15 @@ bg_color = Color(0.252184, 0.34969, 4.81308e-08, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51qws"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.933397, 0.381351, 0.785263, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7u02d"]
 bg_color = Color(0.6, 0.6, 0.6, 0.396078)
@@ -77,12 +86,11 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_xtqa4")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jsvob")
 text = "Math level 1: Dial Drunk- Noah Kahan"
 
-[node name="Button" type="Button" parent="Button"]
-layout_mode = 0
-offset_left = 750.0
-offset_top = 380.0
-offset_right = 1108.0
-offset_bottom = 499.0
+[node name="Button2" type="Button" parent="."]
+offset_left = 789.0
+offset_top = 524.0
+offset_right = 1147.0
+offset_bottom = 643.0
 theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
@@ -103,3 +111,4 @@ text = "Main menu
 "
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
