@@ -1,3 +1,32 @@
-[gd_scene format=3 uid="uid://duncq6tqmyja5"]
+[gd_scene load_steps=3 format=3 uid="uid://duncq6tqmyja5"]
+
+[ext_resource type="Texture2D" uid="uid://6ltvy2a3xv5j" path="res://ocean 2.png" id="1_iaxyd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4f0c7"]
+texture = ExtResource("1_iaxyd")
+modulate_color = Color(0, 0.794554, 0.796301, 1)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 584.0
+offset_bottom = 326.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4f0c7")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = -1.0
+offset_top = 326.0
+offset_right = 585.0
+offset_bottom = 648.0
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 584.0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 326.0
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 585.0
+offset_top = 326.0
+offset_right = 1154.0
+offset_bottom = 649.0

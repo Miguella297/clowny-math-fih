@@ -1,20 +1,105 @@
-[gd_scene format=3 uid="uid://coaoiecle8u1p"]
+[gd_scene load_steps=9 format=3 uid="uid://coaoiecle8u1p"]
+
+[ext_resource type="Texture2D" uid="uid://cdkgow88bfqpm" path="res://wave1.png" id="1_jri8r"]
+[ext_resource type="Script" uid="uid://b0krnhcun55w8" path="res://all_levels.gd" id="1_xtqa4"]
+[ext_resource type="FontFile" uid="uid://d11gv0vnt3tqw" path="res://Valen Valentine Script.otf" id="2_vxump"]
+[ext_resource type="FontFile" uid="uid://dhjx7eiulc476" path="res://Casual Sunday.otf" id="3_vxump"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtqa4"]
+bg_color = Color(0.192278, 0.247935, 0.0391988, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsvob"]
+bg_color = Color(0.252184, 0.34969, 4.81308e-08, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51qws"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7u02d"]
+bg_color = Color(0.6, 0.6, 0.6, 0.396078)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.978746, 0.478075, 0.638692, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_xtqa4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.775063, 0.775063, 0.775063, 1)
 offset_right = 584.0
 offset_bottom = 644.0
+texture = ExtResource("1_jri8r")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(0.864675, 0.864675, 0.864675, 1)
 offset_left = 586.0
 offset_right = 1154.0
 offset_bottom = 644.0
+texture = ExtResource("1_jri8r")
+flip_h = true
 
 [node name="Label" type="Label" parent="."]
-offset_right = 159.0
-offset_bottom = 53.0
+offset_left = 300.0
+offset_top = 18.0
+offset_right = 875.0
+offset_bottom = 135.0
+theme_override_colors/font_color = Color(0.406091, 1, 0.898951, 1)
+theme_override_fonts/font = ExtResource("2_vxump")
+theme_override_font_sizes/font_size = 100
+text = "All levels here!!!!"
 
 [node name="Button" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 39.0
+offset_top = 144.0
+offset_right = 506.0
+offset_bottom = 227.0
+theme_override_colors/font_disabled_color = Color(1, 0.407843, 0.14902, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.396078, 0.152941, 1)
+theme_override_colors/font_hover_color = Color(1, 0.494118, 0.117647, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0.435294, 0.105882, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0.45098, 0.0705882, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.52549, 0.0588235, 1)
+theme_override_colors/icon_pressed_color = Color(0.917647, 0.4, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.917647, 0.435294, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.898039, 0.419608, 0, 1)
+theme_override_colors/font_outline_color = Color(0.890196, 0.419608, 0, 1)
+theme_override_colors/font_color = Color(0.959158, 0.420707, 0, 1)
+theme_override_colors/font_focus_color = Color(0.952941, 0.47451, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.854902, 0.4, 0, 1)
+theme_override_fonts/font = ExtResource("3_vxump")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_xtqa4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jsvob")
+text = "Math level 1: Dial Drunk- Noah Kahan"
+
+[node name="Button" type="Button" parent="Button"]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 380.0
+offset_right = 1108.0
+offset_bottom = 499.0
+theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.968627, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_51qws")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7u02d")
+text = "Main menu
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
