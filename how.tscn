@@ -1,10 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://duncq6tqmyja5"]
+[gd_scene load_steps=12 format=3 uid="uid://duncq6tqmyja5"]
 
 [ext_resource type="Texture2D" uid="uid://6ltvy2a3xv5j" path="res://ocean 2.png" id="1_iaxyd"]
+[ext_resource type="Texture2D" uid="uid://0akrn6wt82h1" path="res://set.png" id="2_0fr73"]
+[ext_resource type="Texture2D" uid="uid://bf00ro2srqpau" path="res://wave 2.png" id="3_hxkul"]
+[ext_resource type="Texture2D" uid="uid://dp56vcfantc6y" path="res://beach.png" id="4_6xt4l"]
+[ext_resource type="FontFile" uid="uid://2kovgfn6gmd4" path="res://Welcome Darling.otf" id="5_tpxh2"]
+[ext_resource type="FontFile" uid="uid://dewo183t8jt01" path="res://Bakso Menu TTF.ttf" id="6_hxkul"]
+[ext_resource type="FontFile" uid="uid://clk6gu1ghtl6h" path="res://Melt-Swashes.ttf" id="7_6xt4l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4f0c7"]
 texture = ExtResource("1_iaxyd")
 modulate_color = Color(0, 0.794554, 0.796301, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yf4nx"]
+texture = ExtResource("2_0fr73")
+modulate_color = Color(0.890196, 1, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mn1mq"]
+texture = ExtResource("3_hxkul")
+modulate_color = Color(1, 0.756863, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t8r2p"]
+texture = ExtResource("4_6xt4l")
+modulate_color = Color(1, 0.643137, 1, 1)
 
 [node name="Node2D" type="Node2D"]
 
@@ -18,15 +36,81 @@ offset_left = -1.0
 offset_top = 326.0
 offset_right = 585.0
 offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yf4nx")
 
 [node name="Panel3" type="Panel" parent="."]
+texture_filter = 1
 offset_left = 584.0
 offset_top = 1.0
 offset_right = 1152.0
 offset_bottom = 326.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_mn1mq")
 
 [node name="Panel4" type="Panel" parent="."]
 offset_left = 585.0
 offset_top = 326.0
 offset_right = 1154.0
 offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_t8r2p")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 92.0
+offset_top = 29.0
+offset_right = 1091.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0.854902, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_tpxh2")
+theme_override_font_sizes/font_size = 70
+text = "Rules + \"Terms and conditions\""
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 18.0
+offset_top = 156.0
+offset_right = 1351.0
+offset_bottom = 261.0
+theme_override_colors/font_color = Color(0, 0.554526, 0, 1)
+theme_override_fonts/font = ExtResource("6_hxkul")
+theme_override_font_sizes/font_size = 20
+text = "As you pass through each level, you shall encounter another creature who would 
+surprise you with a math question. All questions are designed for Kindergarten
+ - grade 10 students.
+There will be music playing in the background of each level to keep you entertained throughout
+the obby. You can choose the level you would like to complete from the song name in the 
+\"all levels\" page.
+Each creature acts as a checkpoint if you are to complete and ansnwer the question correctly.
+There is no time limit.
+
+"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 31.0
+offset_top = 113.0
+offset_right = 323.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(0.631373, 1, 0, 1)
+theme_override_fonts/font = ExtResource("7_6xt4l")
+theme_override_font_sizes/font_size = 30
+text = "HOW THE LEVELS WORK"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 23.0
+offset_top = 443.0
+offset_right = 221.0
+offset_bottom = 472.0
+theme_override_colors/font_color = Color(0.883375, 0.891742, 7.70092e-07, 1)
+theme_override_fonts/font = ExtResource("7_6xt4l")
+theme_override_font_sizes/font_size = 30
+text = "Get bored??"
+
+[node name="Label" type="Label" parent="Label4"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 52.0
+offset_right = 33.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0.995864, 0.734466, 1.15514e-06, 1)
+theme_override_fonts/font = ExtResource("7_6xt4l")
+theme_override_font_sizes/font_size = 25
+text = "There will be an obby and some miny games at the end of all of the levels (Without math questions)
+-There will be some bonus math questions in the end to challenge you!!!
+Go check out my other game on itch.io called \"Pinktune!!\""
