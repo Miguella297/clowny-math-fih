@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Clowny math fih"
+run/main_scene="uid://cbmel0xk8lkw"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

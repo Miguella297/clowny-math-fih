@@ -1,3 +1,231 @@
-[gd_scene format=3 uid="uid://cbmel0xk8lkw"]
+[gd_scene load_steps=18 format=3 uid="uid://cbmel0xk8lkw"]
+
+[ext_resource type="Texture2D" uid="uid://bewmiesg3adjv" path="res://ocean 1.png" id="1_7jlr6"]
+[ext_resource type="Script" uid="uid://dohgv878t3j6q" path="res://main_menu.gd" id="1_juxkc"]
+[ext_resource type="FontFile" uid="uid://bmvd833va1ejr" path="res://Almond Milky.otf" id="2_um2lw"]
+[ext_resource type="FontFile" uid="uid://dyktuwt0dpy1j" path="res://Super Popstar.ttf" id="4_m82ya"]
+[ext_resource type="Texture2D" uid="uid://cvvhue5guu78f" path="res://walk.png" id="5_juxkc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_um2lw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.299723, 0.465545, 0.0640868, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m82ya"]
+bg_color = Color(0.627451, 0.556863, 0.776471, 0.298039)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0.30956, 0.922385, 3.85046e-07, 1)
+border_blend = true
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_juxkc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.203922, 0.8, 0.8, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg1fb"]
+bg_color = Color(0.6, 0.6, 0.6, 0.337255)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.341176, 0.8, 0.8, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ftuh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.745305, 0.0780832, 0.426603, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kki6w"]
+bg_color = Color(0.6, 0.6, 0.6, 0.301961)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.407843, 0.8, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8u1n"]
+atlas = ExtResource("5_juxkc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_im5aw"]
+atlas = ExtResource("5_juxkc")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33jfn"]
+atlas = ExtResource("5_juxkc")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3dag"]
+atlas = ExtResource("5_juxkc")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js07l"]
+atlas = ExtResource("5_juxkc")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dg1fb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8u1n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_im5aw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33jfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3dag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js07l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_juxkc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.509286, 0.509286, 0.509286, 1)
+texture_filter = 1
+offset_right = 1153.0
+offset_bottom = 649.0
+texture = ExtResource("1_7jlr6")
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_left = 306.0
+offset_top = 171.0
+offset_right = 852.0
+offset_bottom = 309.0
+theme_override_colors/font_disabled_color = Color(0.576471, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.658824, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.619608, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.584314, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.607843, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.564706, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0.596078, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.580392, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.576471, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.556863, 0, 0, 1)
+theme_override_colors/font_color = Color(0.699196, 6.37732e-07, 2.88785e-07, 1)
+theme_override_colors/font_focus_color = Color(0.672304, 7.5445e-06, 3.99485e-06, 1)
+theme_override_colors/font_pressed_color = Color(0.698039, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_um2lw")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_um2lw")
+theme_override_styles/normal = SubResource("StyleBoxFlat_m82ya")
+text = "Get started"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 302.0
+offset_top = 43.0
+offset_right = 847.0
+offset_bottom = 125.0
+theme_override_colors/font_color = Color(0.547038, 0.932292, 0.903156, 1)
+theme_override_fonts/font = ExtResource("4_m82ya")
+theme_override_font_sizes/font_size = 70
+text = "Clowny Math Fih"
+
+[node name="Button2" type="Button" parent="."]
+texture_filter = 1
+offset_left = 304.0
+offset_top = 315.0
+offset_right = 851.0
+offset_bottom = 459.0
+theme_override_colors/font_disabled_color = Color(2.40654e-07, 0.228616, 0.619074, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0.635294, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0.509804, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0.788235, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0.745098, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0.752941, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0.756863, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0.796078, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0.8, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.811765, 1)
+theme_override_colors/font_color = Color(0, 0, 0.788235, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.772549, 1)
+theme_override_fonts/font = ExtResource("2_um2lw")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_juxkc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dg1fb")
+text = "All levels"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 304.0
+offset_top = 467.0
+offset_right = 849.0
+offset_bottom = 613.0
+theme_override_colors/font_disabled_color = Color(0.941176, 0.639216, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.905882, 0.67451, 0, 1)
+theme_override_colors/font_hover_color = Color(0.937255, 0.678431, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.945098, 0.662745, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.976471, 0.701961, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.972549, 0.564706, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0.956863, 0.635294, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.945098, 0.647059, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.992157, 0.635294, 0, 1)
+theme_override_colors/font_outline_color = Color(0.917647, 0.698039, 0, 1)
+theme_override_colors/font_color = Color(0.933333, 0.627451, 0, 1)
+theme_override_colors/font_focus_color = Color(0.905882, 0.698039, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.878431, 0.623529, 0, 1)
+theme_override_fonts/font = ExtResource("2_um2lw")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_3ftuh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kki6w")
+text = "	How to play?
+"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(171.5, 399)
+scale = Vector2(6.09375, 7.375)
+sprite_frames = SubResource("SpriteFrames_dg1fb")
+autoplay = "default"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
