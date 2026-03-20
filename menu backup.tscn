@@ -1,14 +1,139 @@
-[gd_scene format=3 uid="uid://dtvxfi1fppkjc"]
+[gd_scene load_steps=12 format=3 uid="uid://dtvxfi1fppkjc"]
+
+[ext_resource type="Texture2D" uid="uid://b516uxm7hb3rb" path="res://vasa 2.png" id="1_e5abj"]
+[ext_resource type="Script" uid="uid://j2vckmvynqt4" path="res://menu_backup.gd" id="1_fae2v"]
+[ext_resource type="Texture2D" uid="uid://dkjpohynqo1pc" path="res://vasa.png" id="2_fae2v"]
+[ext_resource type="FontFile" uid="uid://b0puonfennwt4" path="res://GrimeSlime-Regular.ttf" id="3_voi70"]
+[ext_resource type="FontFile" uid="uid://dewo183t8jt01" path="res://Bakso Menu TTF.ttf" id="4_2y8rc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ik8hg"]
+texture = ExtResource("1_e5abj")
+modulate_color = Color(0.388621, 0.716481, 0.697129, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ogvy1"]
+texture = ExtResource("2_fae2v")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpy52"]
+bg_color = Color(0.6, 0.270588, 0.6, 0)
+border_width_left = 10
+border_width_right = 10
+border_color = Color(0.8, 0.254902, 0.8, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jrxjm"]
+bg_color = Color(0.6, 0.6, 0.6, 0.294118)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.8, 0.266667, 0.8, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e5abj"]
+bg_color = Color(0.6, 0.6, 0.6, 0.054902)
+border_width_left = 10
+border_width_right = 10
+border_color = Color(0.94902, 1, 0, 0.670588)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fae2v"]
+bg_color = Color(0.6, 0.6, 0.6, 0.352941)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.846204, 0.831294, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_fae2v")
 
 [node name="Panel" type="Panel" parent="."]
+texture_filter = 1
 offset_left = 1.0
 offset_right = 560.0
 offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ik8hg")
 
 [node name="Panel2" type="Panel" parent="."]
+modulate = Color(0.881937, 0.881937, 0.881937, 1)
 offset_left = 560.0
 offset_top = 2.0
 offset_right = 1156.0
 offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ogvy1")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 70.0
+offset_right = 1062.0
+offset_bottom = 211.0
+theme_override_colors/font_color = Color(0.965575, 0.570095, 0, 1)
+theme_override_fonts/font = ExtResource("3_voi70")
+theme_override_font_sizes/font_size = 50
+text = "Are you sure that you want to quit?
+"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 208.0
+offset_top = 207.0
+offset_right = 918.0
+offset_bottom = 377.0
+theme_override_colors/font_disabled_color = Color(0.807843, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.823529, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.811765, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.811765, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.847059, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.862745, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0.85098, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.85098, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.866667, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.866667, 0, 0, 1)
+theme_override_colors/font_color = Color(0.847059, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.862745, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.854902, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_2y8rc")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_jpy52")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jrxjm")
+text = "YEA MAN"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 208.0
+offset_top = 396.0
+offset_right = 920.0
+offset_bottom = 562.0
+theme_override_colors/font_disabled_color = Color(0.56239, 0.0695937, 0.48874, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.53702, 0.0940466, 0.601669, 1)
+theme_override_colors/font_hover_color = Color(0.635494, 0.0876549, 0.54621, 1)
+theme_override_colors/icon_disabled_color = Color(0.535811, 0.117496, 0.560842, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.484792, 0.0774114, 0.497775, 1)
+theme_override_colors/icon_hover_color = Color(0.49137, 0.114341, 0.50407, 1)
+theme_override_colors/icon_pressed_color = Color(0.419586, 0.0521005, 0.449534, 1)
+theme_override_colors/icon_focus_color = Color(0.507782, 0.130486, 0.483144, 1)
+theme_override_colors/icon_normal_color = Color(0.517796, 0.14685, 0.395885, 1)
+theme_override_colors/font_outline_color = Color(0.593521, 0.0546853, 0.552587, 1)
+theme_override_colors/font_color = Color(0.592359, 8.82237e-05, 0.516364, 1)
+theme_override_colors/font_focus_color = Color(0.55892, 0.0670419, 0.456281, 1)
+theme_override_colors/font_pressed_color = Color(0.613229, 0.0954488, 0.481157, 1)
+theme_override_fonts/font = ExtResource("4_2y8rc")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_e5abj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fae2v")
+text = "SYBAU AND TAKE ME TO ALL LEVELS PAGE
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
