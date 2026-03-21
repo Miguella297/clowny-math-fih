@@ -1,0 +1,90 @@
+[gd_scene load_steps=9 format=3 uid="uid://bdw00a65mnrca"]
+
+[ext_resource type="Texture2D" uid="uid://bdcyhgfquj14d" path="res://New Piskel (7).png" id="1_45pq5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g51g3"]
+atlas = ExtResource("1_45pq5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pa8dn"]
+atlas = ExtResource("1_45pq5")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8d1r1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g51g3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pa8dn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jsi8p"]
+size = Vector2(26, 24.3158)
+
+[sub_resource type="Animation" id="Animation_ewymi"]
+resource_name = "skully"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(9.53674e-07, 9.53674e-07), Vector2(60, 0), Vector2(9.53674e-07, 9.53674e-07)]
+}
+
+[sub_resource type="Animation" id="Animation_5o1f5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9.53674e-07, 9.53674e-07)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mi564"]
+_data = {
+&"RESET": SubResource("Animation_5o1f5"),
+&"skully": SubResource("Animation_ewymi")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(9.53674e-07, 9.53674e-07)
+scale = Vector2(1.125, 1.1875)
+sprite_frames = SubResource("SpriteFrames_8d1r1")
+autoplay = "default"
+frame = 1
+frame_progress = 0.0179987
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+position = Vector2(-0.555556, 0.473684)
+shape = SubResource("RectangleShape2D_jsi8p")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D/Area2D/CollisionShape2D")
+libraries = {
+&"": SubResource("AnimationLibrary_mi564")
+}
+
+[node name="Marker2D" type="Marker2D" parent="."]

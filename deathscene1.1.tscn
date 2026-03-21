@@ -1,3 +1,23 @@
 [gd_scene format=3 uid="uid://cvuwuo7twgagd"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 579.0
+offset_bottom = 336.0
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 579.0
+offset_right = 1150.0
+offset_bottom = 337.0
+
+[node name="Panel3" type="Panel" parent="."]
+offset_top = 336.0
+offset_right = 579.0
+offset_bottom = 648.0
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 579.0
+offset_top = 337.0
+offset_right = 1152.0
+offset_bottom = 649.0
