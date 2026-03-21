@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dy3lkq2xbpah1"]
+[gd_scene load_steps=18 format=3 uid="uid://dy3lkq2xbpah1"]
 
 [ext_resource type="Texture2D" uid="uid://bewmiesg3adjv" path="res://ocean 1.png" id="1_jwv3a"]
 [ext_resource type="Script" uid="uid://0pmsjvv1cbp0" path="res://level_1.gd" id="1_v8kj3"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://cgp2fhn6mmif" path="res://Bloom Gum PERSONAL USE ONLY!.ttf" id="4_v8kj3"]
 [ext_resource type="Texture2D" uid="uid://crx2ju1ay06ik" path="res://spike.png" id="6_crycw"]
 [ext_resource type="Script" uid="uid://dy21qoehx86wv" path="res://area_2d.gd" id="7_i2041"]
+[ext_resource type="Texture2D" uid="uid://6wwg5awn014j" path="res://Spike2.png" id="8_xy4tn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ootpb"]
 texture = ExtResource("2_dopym")
@@ -338,6 +339,17 @@ sources/0 = SubResource("TileSetAtlasSource_i2041")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xy4tn"]
 size = Vector2(49.2857, 17.8569)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_usj0q"]
+texture = ExtResource("8_xy4tn")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5j5gb"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_usj0q")
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_v8kj3")
 
@@ -415,11 +427,18 @@ layer_0/tile_data = PackedInt32Array(786447, 0, 0, 851983, 0, 1, 786448, 65536, 
 position = Vector2(-4, -6)
 scale = Vector2(0.7, 0.7)
 script = ExtResource("7_i2041")
-target_scene_path = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(173.929, 846.071)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xy4tn")
+
+[node name="TileMap3" type="TileMap" parent="."]
+texture_filter = 1
+position = Vector2(-4, -6)
+scale = Vector2(0.7, 0.7)
+tile_set = SubResource("TileSet_5j5gb")
+format = 2
+layer_0/tile_data = PackedInt32Array(1572873, 0, 0, 1638409, 0, 1, 1572874, 65536, 0, 1638410, 65536, 1, 1835027, 0, 0, 1900563, 0, 1, 1835028, 65536, 0, 1900564, 65536, 1, 1835025, 0, 0, 1900561, 0, 1, 1835026, 65536, 0, 1900562, 65536, 1, 1572875, 0, 0, 1638411, 0, 1, 1572876, 65536, 0, 1638412, 65536, 1)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
