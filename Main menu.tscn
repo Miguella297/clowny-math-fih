@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://cbmel0xk8lkw"]
+[gd_scene load_steps=19 format=3 uid="uid://cbmel0xk8lkw"]
 
 [ext_resource type="Texture2D" uid="uid://bewmiesg3adjv" path="res://ocean 1.png" id="1_7jlr6"]
 [ext_resource type="Script" uid="uid://dohgv878t3j6q" path="res://main_menu.gd" id="1_juxkc"]
 [ext_resource type="FontFile" uid="uid://bmvd833va1ejr" path="res://Almond Milky.otf" id="2_um2lw"]
 [ext_resource type="FontFile" uid="uid://dyktuwt0dpy1j" path="res://Super Popstar.ttf" id="4_m82ya"]
+[ext_resource type="AudioStream" uid="uid://dyerst5axu6sm" path="res://baldy theme.mp3" id="5_dg1fb"]
 [ext_resource type="Texture2D" uid="uid://cvvhue5guu78f" path="res://walk.png" id="5_juxkc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_um2lw"]
@@ -218,6 +219,9 @@ text = "	How to play?
 "
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_dg1fb")
+volume_db = 13.867
+autoplay = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

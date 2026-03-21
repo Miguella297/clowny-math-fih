@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bd2t6ehv3h0u2"]
+[gd_scene load_steps=15 format=3 uid="uid://bd2t6ehv3h0u2"]
 
+[ext_resource type="Script" uid="uid://dlj5jqgi5a4fi" path="res://deathscene.gd" id="1_65y2e"]
 [ext_resource type="Texture2D" uid="uid://ddgp0jttf62sk" path="res://Turtlee.png" id="1_aemne"]
 [ext_resource type="Texture2D" uid="uid://cpcrp5ed0hhl2" path="res://fishies.png" id="2_sxo51"]
 [ext_resource type="Texture2D" uid="uid://dxj368r183cd4" path="res://choral.png" id="3_65y2e"]
 [ext_resource type="FontFile" uid="uid://dewo183t8jt01" path="res://Bakso Menu TTF.ttf" id="4_uwjh0"]
+[ext_resource type="FontFile" uid="uid://clk6gu1ghtl6h" path="res://Melt-Swashes.ttf" id="5_sxo51"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nnxiw"]
 texture = ExtResource("1_aemne")
@@ -17,7 +19,49 @@ modulate_color = Color(0, 0.770913, 0.774391, 1)
 texture = ExtResource("3_65y2e")
 modulate_color = Color(0.720467, 0.720468, 0.720467, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65y2e"]
+bg_color = Color(0.0825851, 0.305745, 0.49961, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.155505, 0.345945, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwjh0"]
+bg_color = Color(0.0253171, 0.239141, 0.383157, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1.54018e-06, 0.583657, 0.673028, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nnxiw"]
+bg_color = Color(0.286559, 0.390025, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u0nn2"]
+bg_color = Color(0.6, 0.866667, 0.6, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.8, 0.360784, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="AudioStream" id="AudioStream_65y2e"]
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_65y2e")
 
 [node name="Panel" type="Panel" parent="."]
 texture_filter = 1
@@ -39,12 +83,78 @@ rotation = -0.00108153
 theme_override_styles/panel = SubResource("StyleBoxTexture_y7k4k")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 278.0
-offset_top = 87.0
-offset_right = 966.0
-offset_bottom = 196.0
+offset_left = 253.0
+offset_top = 91.0
+offset_right = 941.0
+offset_bottom = 200.0
 theme_override_colors/font_color = Color(0.256507, 0.840545, 0.0685186, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_uwjh0")
 theme_override_font_sizes/font_size = 70
 text = "OOPSIES... Ya died"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 524.0
+offset_top = 183.0
+offset_right = 669.0
+offset_bottom = 225.0
+theme_override_colors/font_color = Color(0.919281, 4.47616e-06, 1.15514e-06, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_sxo51")
+theme_override_font_sizes/font_size = 30
+text = "Choose to"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 308.0
+offset_top = 239.0
+offset_right = 876.0
+offset_bottom = 363.0
+theme_override_colors/font_disabled_color = Color(0.904708, 0.589806, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8859, 0.629787, 7.70092e-07, 1)
+theme_override_colors/font_hover_color = Color(0.82688, 0.57091, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.810173, 0.569896, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.814813, 0.583725, 1.15514e-06, 1)
+theme_override_colors/icon_hover_color = Color(0.84076, 0.601483, 3.85046e-07, 1)
+theme_override_colors/icon_pressed_color = Color(0.830384, 0.607513, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.781627, 0.559218, 1.92523e-06, 1)
+theme_override_colors/icon_normal_color = Color(0.780072, 0.560017, 0.0109775, 1)
+theme_override_colors/font_outline_color = Color(0.829103, 0.634928, 0.019724, 1)
+theme_override_colors/font_color = Color(0.787869, 0.587439, 0.0764463, 1)
+theme_override_colors/font_focus_color = Color(0.812722, 0.615635, 0.128677, 1)
+theme_override_colors/font_pressed_color = Color(0.805414, 0.593256, 0.105917, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_65y2e")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uwjh0")
+text = "Try again"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 310.0
+offset_top = 379.0
+offset_right = 876.0
+offset_bottom = 493.0
+theme_override_colors/font_disabled_color = Color(0, 0.72549, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.694118, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.701961, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.729412, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.745098, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.745098, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.768627, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.784314, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.752941, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.756863, 0, 1)
+theme_override_colors/font_color = Color(0, 0.733333, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0.74902, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.752941, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_nnxiw")
+theme_override_styles/normal = SubResource("StyleBoxFlat_u0nn2")
+text = "Main menu"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(308, 239)
+stream = SubResource("AudioStream_65y2e")
+volume_db = 13.867
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dyerst5axu6sm"
+path="res://.godot/imported/baldy theme.mp3-c2c14719a18355a71b6653ce16fab2c0.mp3str"
+
+[deps]
+
+source_file="res://baldy theme.mp3"
+dest_files=["res://.godot/imported/baldy theme.mp3-c2c14719a18355a71b6653ce16fab2c0.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
