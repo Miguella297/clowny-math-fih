@@ -1,3 +1,50 @@
-[gd_scene format=3 uid="uid://bd2t6ehv3h0u2"]
+[gd_scene load_steps=8 format=3 uid="uid://bd2t6ehv3h0u2"]
+
+[ext_resource type="Texture2D" uid="uid://ddgp0jttf62sk" path="res://Turtlee.png" id="1_aemne"]
+[ext_resource type="Texture2D" uid="uid://cpcrp5ed0hhl2" path="res://fishies.png" id="2_sxo51"]
+[ext_resource type="Texture2D" uid="uid://dxj368r183cd4" path="res://choral.png" id="3_65y2e"]
+[ext_resource type="FontFile" uid="uid://dewo183t8jt01" path="res://Bakso Menu TTF.ttf" id="4_uwjh0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nnxiw"]
+texture = ExtResource("1_aemne")
+modulate_color = Color(0.860369, 0.860369, 0.860369, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u0nn2"]
+texture = ExtResource("2_sxo51")
+modulate_color = Color(0, 0.770913, 0.774391, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y7k4k"]
+texture = ExtResource("3_65y2e")
+modulate_color = Color(0.720467, 0.720468, 0.720467, 1)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+texture_filter = 1
+offset_right = 393.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_nnxiw")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 393.0
+offset_right = 778.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_u0nn2")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 778.0
+offset_right = 1152.0
+offset_bottom = 649.0
+rotation = -0.00108153
+theme_override_styles/panel = SubResource("StyleBoxTexture_y7k4k")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 278.0
+offset_top = 87.0
+offset_right = 966.0
+offset_bottom = 196.0
+theme_override_colors/font_color = Color(0.256507, 0.840545, 0.0685186, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_uwjh0")
+theme_override_font_sizes/font_size = 70
+text = "OOPSIES... Ya died"
