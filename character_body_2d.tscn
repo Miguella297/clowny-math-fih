@@ -65,7 +65,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Running",
-"speed": 17.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -91,7 +91,7 @@ position = Vector2(21.75, 569)
 scale = Vector2(1.45313, 1.5)
 sprite_frames = SubResource("SpriteFrames_dopym")
 animation = &"Running"
-frame_progress = 0.584462
+frame_progress = 0.848936
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(21.25, 564)
