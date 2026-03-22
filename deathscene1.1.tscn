@@ -1,23 +1,174 @@
-[gd_scene format=3 uid="uid://cvuwuo7twgagd"]
+[gd_scene load_steps=16 format=3 uid="uid://cvuwuo7twgagd"]
+
+[ext_resource type="Texture2D" uid="uid://pgmuth82mqvf" path="res://donut.png" id="1_iiv4w"]
+[ext_resource type="Texture2D" uid="uid://cdkgow88bfqpm" path="res://wave1.png" id="2_4mey1"]
+[ext_resource type="Texture2D" uid="uid://b516uxm7hb3rb" path="res://vasa 2.png" id="3_nuped"]
+[ext_resource type="Texture2D" uid="uid://lwfkl32jq45u" path="res://doggo surf.png" id="4_oiaby"]
+[ext_resource type="FontFile" uid="uid://bmvd833va1ejr" path="res://Almond Milky.otf" id="5_5fear"]
+[ext_resource type="FontFile" uid="uid://dewo183t8jt01" path="res://Bakso Menu TTF.ttf" id="6_hpf4a"]
+[ext_resource type="AudioStream" uid="uid://djp7fvrrh7sqn" path="res://fah.mp3" id="7_4mey1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vb4el"]
+texture = ExtResource("1_iiv4w")
+modulate_color = Color(0.921896, 0.000855572, 0.9471, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kjg3i"]
+texture = ExtResource("2_4mey1")
+modulate_color = Color(0.431373, 1, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g1kj6"]
+texture = ExtResource("3_nuped")
+modulate_color = Color(0, 0.64221, 0.643956, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mdhvr"]
+texture = ExtResource("4_oiaby")
+modulate_color = Color(0.525101, 0.525101, 0.525101, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iiv4w"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.160784, 0.8, 0.156863, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4mey1"]
+bg_color = Color(0.6, 0.6, 0.6, 0.337255)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.330709, 0.433355, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oiaby"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.727305, 0.329407, 0.41798, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nuped"]
+bg_color = Color(0.6, 0.6, 0.6, 0.239216)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.32549, 0.8, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 579.0
 offset_bottom = 336.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_vb4el")
 
 [node name="Panel2" type="Panel" parent="."]
 offset_left = 579.0
 offset_right = 1150.0
 offset_bottom = 337.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_kjg3i")
 
 [node name="Panel3" type="Panel" parent="."]
 offset_top = 336.0
 offset_right = 579.0
 offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_g1kj6")
 
 [node name="Panel4" type="Panel" parent="."]
 offset_left = 579.0
 offset_top = 337.0
 offset_right = 1152.0
 offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_mdhvr")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 359.0
+offset_top = 43.0
+offset_right = 808.0
+offset_bottom = 139.0
+theme_override_colors/font_color = Color(0.874676, 0.529341, 1.92523e-07, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_5fear")
+theme_override_font_sizes/font_size = 70
+text = "Girl you dead"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 987.0
+offset_top = 394.0
+offset_right = 1148.0
+offset_bottom = 456.0
+theme_override_colors/font_color = Color(0.295233, 0.725886, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_hpf4a")
+theme_override_font_sizes/font_size = 40
+text = "<-- You"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 268.0
+offset_top = 163.0
+offset_right = 891.0
+offset_bottom = 323.0
+theme_override_colors/font_disabled_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0.968627, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 1, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0.811765, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.976471, 1)
+theme_override_colors/font_color = Color(0, 0, 0.976471, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.968627, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.972549, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_iiv4w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4mey1")
+text = "Try again"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 268.0
+offset_top = 346.0
+offset_right = 892.0
+offset_bottom = 495.0
+theme_override_colors/font_disabled_color = Color(0, 0.290631, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.277685, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.307947, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.307947, 4.81307e-07, 1)
+theme_override_colors/icon_hover_pressed_color = Color(6.31716e-07, 0.31663, 2.40654e-07, 1)
+theme_override_colors/icon_hover_color = Color(5.23422e-07, 0.342791, 7.21961e-07, 1)
+theme_override_colors/icon_pressed_color = Color(1.38978e-06, 0.320978, 1.44392e-07, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.303612, 3.36915e-07, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.320978, 3.36915e-07, 1)
+theme_override_colors/font_outline_color = Color(0, 0.307947, 3.36915e-07, 1)
+theme_override_colors/font_color = Color(0, 0.320978, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0.342791, 0, 1)
+theme_override_colors/font_pressed_color = Color(4.99357e-07, 0.286312, 8.18223e-07, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_oiaby")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nuped")
+text = "Main menu"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(576, 585)
+stream = ExtResource("7_4mey1")
+volume_db = 13.867
+pitch_scale = 1.32
+autoplay = true
