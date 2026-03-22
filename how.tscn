@@ -92,16 +92,17 @@ theme_override_font_sizes/font_size = 70
 text = "Rules + \"Terms and conditions\""
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 18.0
-offset_top = 156.0
-offset_right = 1351.0
-offset_bottom = 261.0
+offset_left = 10.0
+offset_top = 147.0
+offset_right = 1343.0
+offset_bottom = 518.0
 theme_override_colors/font_color = Color(0.815768, 0.635705, 1, 1)
 theme_override_fonts/font = ExtResource("6_hxkul")
 theme_override_font_sizes/font_size = 20
 text = "As you pass through each level, you shall encounter another creature who would 
 surprise you with a math question. All questions are designed for Kindergarten
- - grade 10 students.
+ - grade 10 students. *There will be a title \"math man\" in each level where you will
+recieve math questions.
 There will be music playing in the background of each level to keep you entertained throughout
 the obby. You can choose the level you would like to complete from the song name in the 
 \"all levels\" page.

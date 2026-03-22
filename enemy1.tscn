@@ -1,6 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bdw00a65mnrca"]
+[gd_scene load_steps=30 format=3 uid="uid://bdw00a65mnrca"]
 
-[ext_resource type="Texture2D" uid="uid://bdcyhgfquj14d" path="res://New Piskel (7).png" id="1_45pq5"]
+[ext_resource type="Texture2D" uid="uid://bdcyhgfquj14d" path="res://rename.png" id="1_45pq5"]
+[ext_resource type="Script" uid="uid://c1swo7hfqpon1" path="res://area_2d_4.gd" id="2_g51g3"]
+[ext_resource type="Script" uid="uid://mjdoxafcby7j" path="res://area_2d_5.gd" id="3_8d1r1"]
+[ext_resource type="Texture2D" uid="uid://c0c773sw1w1cu" path="res://doom flower.png" id="3_pa8dn"]
+[ext_resource type="Script" uid="uid://djfur1g2rpy5q" path="res://area_2d_6.gd" id="5_jsi8p"]
+[ext_resource type="Script" uid="uid://b3a2nxbcwk5qg" path="res://area_2d_7.gd" id="6_ewymi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g51g3"]
 atlas = ExtResource("1_45pq5")
@@ -21,27 +26,11 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jsi8p"]
 size = Vector2(26, 24.3158)
-
-[sub_resource type="Animation" id="Animation_ewymi"]
-resource_name = "skully"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../..:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(9.53674e-07, 9.53674e-07), Vector2(60, 0), Vector2(9.53674e-07, 9.53674e-07)]
-}
 
 [sub_resource type="Animation" id="Animation_5o1f5"]
 length = 0.001
@@ -58,33 +47,258 @@ tracks/0/keys = {
 "values": [Vector2(9.53674e-07, 9.53674e-07)]
 }
 
+[sub_resource type="Animation" id="Animation_ewymi"]
+resource_name = "skully"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(9.53674e-07, 9.53674e-07), Vector2(60, 0), Vector2(9.53674e-07, 9.53674e-07)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mi564"]
 _data = {
 &"RESET": SubResource("Animation_5o1f5"),
 &"skully": SubResource("Animation_ewymi")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8d1r1"]
+atlas = ExtResource("1_45pq5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsi8p"]
+atlas = ExtResource("1_45pq5")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ewymi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8d1r1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsi8p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g51g3"]
+size = Vector2(26, 25.9067)
+
+[sub_resource type="Animation" id="Animation_g51g3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(263, -409.25)]
+}
+
+[sub_resource type="Animation" id="Animation_pa8dn"]
+resource_name = "skully2"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(285, -411), Vector2(430, -412), Vector2(285, -412)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8d1r1"]
+_data = {
+&"RESET": SubResource("Animation_g51g3"),
+&"skully2": SubResource("Animation_pa8dn")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewymi"]
+atlas = ExtResource("3_pa8dn")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5o1f5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewymi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ewymi"]
+radius = 17.516
+
+[sub_resource type="Animation" id="Animation_jsi8p"]
+resource_name = "doom flowa"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(395, -2), Vector2(484, -7), Vector2(395, -2)]
+}
+
+[sub_resource type="Animation" id="Animation_mi564"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(395, -2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tnyew"]
+_data = {
+&"RESET": SubResource("Animation_mi564"),
+&"doom flowa": SubResource("Animation_jsi8p")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5o1f5"]
+atlas = ExtResource("3_pa8dn")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mi564"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5o1f5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5o1f5"]
+radius = 15.36
+height = 32.0001
+
 [node name="Node2D" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(9.53674e-07, 9.53674e-07)
-scale = Vector2(1.125, 1.1875)
+scale = Vector2(1.375, 1.71875)
 sprite_frames = SubResource("SpriteFrames_8d1r1")
 autoplay = "default"
 frame = 1
-frame_progress = 0.0179987
+frame_progress = 0.479737
 
-[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+[node name="Area2D4" type="Area2D" parent="AnimatedSprite2D"]
+script = ExtResource("2_g51g3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D4"]
 position = Vector2(-0.555556, 0.473684)
 shape = SubResource("RectangleShape2D_jsi8p")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../AnimatedSprite2D/Area2D/CollisionShape2D")
+root_node = NodePath("../AnimatedSprite2D/Area2D4/CollisionShape2D")
 libraries = {
 &"": SubResource("AnimationLibrary_mi564")
 }
+autoplay = "skully"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(263, -409.25)
+scale = Vector2(1.0625, 1.17187)
+sprite_frames = SubResource("SpriteFrames_ewymi")
+autoplay = "default"
+frame = 1
+frame_progress = 0.843451
+
+[node name="Area2D5" type="Area2D" parent="AnimatedSprite2D2"]
+position = Vector2(-23.5294, -0.853334)
+script = ExtResource("3_8d1r1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D2/Area2D5"]
+position = Vector2(22.5882, 0.853353)
+shape = SubResource("RectangleShape2D_g51g3")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D2/Area2D5/CollisionShape2D")
+libraries = {
+&"": SubResource("AnimationLibrary_8d1r1")
+}
+autoplay = "skully2"
 
 [node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(430, -411)
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(395, -2)
+scale = Vector2(1.75, 1.71875)
+sprite_frames = SubResource("SpriteFrames_5o1f5")
+
+[node name="Area2D6" type="Area2D" parent="AnimatedSprite2D3"]
+script = ExtResource("5_jsi8p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3/Area2D6"]
+position = Vector2(1.14284, 2.98023e-07)
+shape = SubResource("CircleShape2D_ewymi")
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D3")
+libraries = {
+&"": SubResource("AnimationLibrary_tnyew")
+}
+autoplay = "doom flowa"
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(484, -7)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1024, 1)
+scale = Vector2(1.5625, 1.625)
+sprite_frames = SubResource("SpriteFrames_mi564")
+
+[node name="Area2D7" type="Area2D" parent="AnimatedSprite2D4"]
+script = ExtResource("6_ewymi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D4/Area2D7"]
+position = Vector2(1.92004, -0.615385)
+shape = SubResource("CapsuleShape2D_5o1f5")
+
+[node name="AnimationPlayer4" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D4/Area2D7/CollisionShape2D")
+
+[node name="Marker2D3" type="Marker2D" parent="."]
+position = Vector2(1290, 1)

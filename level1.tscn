@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://dy3lkq2xbpah1"]
+[gd_scene load_steps=59 format=3 uid="uid://dy3lkq2xbpah1"]
 
 [ext_resource type="Texture2D" uid="uid://bewmiesg3adjv" path="res://ocean 1.png" id="1_jwv3a"]
 [ext_resource type="Script" uid="uid://0pmsjvv1cbp0" path="res://level_1.gd" id="1_v8kj3"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://jq36d661jw5p" path="res://Idle.png" id="9_usj0q"]
 [ext_resource type="Script" uid="uid://bgsruvxgyiweo" path="res://area_2d_2.gd" id="10_5j5gb"]
 [ext_resource type="Script" uid="uid://ddwnrj4b083r7" path="res://area_2d_3.gd" id="11_mx85b"]
+[ext_resource type="PackedScene" uid="uid://bdw00a65mnrca" path="res://enemy1.tscn" id="12_hx44q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ootpb"]
 texture = ExtResource("2_dopym")
@@ -731,5 +732,37 @@ shape = SubResource("RectangleShape2D_d78wo")
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Area2D3"]
 position = Vector2(208.5, -224.5)
 shape = SubResource("RectangleShape2D_2cjx3")
+
+[node name="Node2D" parent="." instance=ExtResource("12_hx44q")]
+position = Vector2(234, 625)
+scale = Vector2(0.7, 0.7)
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 553.0
+offset_top = 505.0
+offset_right = 653.0
+offset_bottom = 533.0
+pivot_offset = Vector2(-1098, 288)
+theme_override_colors/font_color = Color(1, 0.972549, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Math man"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 65.0
+offset_top = 215.0
+offset_right = 165.0
+offset_bottom = 243.0
+theme_override_colors/font_color = Color(1, 0.972549, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Math man"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 975.0
+offset_top = 1.0
+offset_right = 1075.0
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(1, 0.972549, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Math man"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
