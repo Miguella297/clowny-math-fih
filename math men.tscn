@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=3 uid="uid://coty38cwijcbx"]
+
+[ext_resource type="Texture2D" uid="uid://c66k75n4ul216" path="res://Math man.png" id="1_twdkm"]
+[ext_resource type="Script" uid="uid://xo5kq1peaum" path="res://area_2d_10.gd" id="2_txaw4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txaw4"]
+atlas = ExtResource("1_twdkm")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7week"]
+atlas = ExtResource("1_twdkm")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m1rv1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txaw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7week")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twdkm"]
+size = Vector2(17.8367, 48.8085)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1rv1"]
+atlas = ExtResource("1_twdkm")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64u6x"]
+atlas = ExtResource("1_twdkm")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rpjxs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m1rv1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64u6x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, -1)
+scale = Vector2(1.53125, 1.46875)
+sprite_frames = SubResource("SpriteFrames_m1rv1")
+autoplay = "default"
+frame_progress = 0.56162
+
+[node name="Area2D10" type="Area2D" parent="AnimatedSprite2D"]
+script = ExtResource("2_txaw4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D10"]
+position = Vector2(-36.7959, -5.55319)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_twdkm")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-609, -321)
+scale = Vector2(1.53125, 1.45313)
+sprite_frames = SubResource("SpriteFrames_rpjxs")
+
+[node name="Area2D11" type="Area2D" parent="AnimatedSprite2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D2/Area2D11"]
