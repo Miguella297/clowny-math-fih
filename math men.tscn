@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://coty38cwijcbx"]
+[gd_scene load_steps=17 format=3 uid="uid://coty38cwijcbx"]
 
 [ext_resource type="Texture2D" uid="uid://c66k75n4ul216" path="res://Math man.png" id="1_twdkm"]
 [ext_resource type="Script" uid="uid://xo5kq1peaum" path="res://area_2d_10.gd" id="2_txaw4"]
+[ext_resource type="Script" uid="uid://dbkms1ckh2wdi" path="res://area_2d_11.gd" id="3_7week"]
+[ext_resource type="Script" uid="uid://c323ic5j4bgmx" path="res://area_2d_12.gd" id="4_m1rv1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_txaw4"]
 atlas = ExtResource("1_twdkm")
@@ -47,8 +49,36 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 8.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txaw4"]
+size = Vector2(20, 47.8493)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpjxs"]
+atlas = ExtResource("1_twdkm")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svtuq"]
+atlas = ExtResource("1_twdkm")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_07sl7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpjxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svtuq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7week"]
+size = Vector2(7.99899, 65.2089)
 
 [node name="Node2D" type="Node2D"]
 
@@ -65,7 +95,6 @@ script = ExtResource("2_txaw4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D10"]
 position = Vector2(-36.7959, -5.55319)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_twdkm")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
@@ -73,7 +102,29 @@ texture_filter = 1
 position = Vector2(-609, -321)
 scale = Vector2(1.53125, 1.45313)
 sprite_frames = SubResource("SpriteFrames_rpjxs")
+frame = 1
+frame_progress = 0.919739
 
 [node name="Area2D11" type="Area2D" parent="AnimatedSprite2D2"]
+script = ExtResource("3_7week")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D2/Area2D11"]
+position = Vector2(7.83673, -4.97845)
+shape = SubResource("RectangleShape2D_txaw4")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(505, -537)
+scale = Vector2(1.17208, 1.08203)
+sprite_frames = SubResource("SpriteFrames_07sl7")
+autoplay = "default"
+frame_progress = 0.90751
+
+[node name="Area2D12" type="Area2D" parent="AnimatedSprite2D3"]
+script = ExtResource("4_m1rv1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3/Area2D12"]
+position = Vector2(-43.5199, -7.33591)
+rotation = 3.14159
+scale = Vector2(2.98464, -0.82025)
+shape = SubResource("RectangleShape2D_7week")

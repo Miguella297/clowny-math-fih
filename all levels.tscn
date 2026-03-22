@@ -67,6 +67,7 @@ offset_left = 39.0
 offset_top = 144.0
 offset_right = 506.0
 offset_bottom = 227.0
+scale = Vector2(0.96243, 1.19125)
 theme_override_colors/font_disabled_color = Color(1, 0.407843, 0.14902, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 0.396078, 0.152941, 1)
 theme_override_colors/font_hover_color = Color(1, 0.494118, 0.117647, 1)
@@ -84,7 +85,7 @@ theme_override_fonts/font = ExtResource("3_vxump")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxFlat_xtqa4")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jsvob")
-text = "Math level 1: Dial Drunk- Noah Kahan"
+text = "Math level 1: Dial Drunk- Noah Kahan and PM "
 
 [node name="Button2" type="Button" parent="."]
 offset_left = 789.0
