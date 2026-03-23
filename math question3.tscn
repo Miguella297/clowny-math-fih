@@ -52,6 +52,7 @@ border_color = Color(0.8, 0.368627, 0.8, 1)
 corner_radius_top_left = 60
 corner_radius_top_right = 60
 corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7x332"]
 bg_color = Color(0.6, 0.6, 0.6, 0.529412)

@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bdw00a65mnrca" path="res://enemy1.tscn" id="11_yjuhj"]
 [ext_resource type="PackedScene" uid="uid://coty38cwijcbx" path="res://math men.tscn" id="12_aihcx"]
 [ext_resource type="FontFile" uid="uid://clk6gu1ghtl6h" path="res://Melt-Swashes.ttf" id="13_xlayv"]
-[ext_resource type="AudioStream" uid="uid://be4eei8ylhp16" path="res://dial drunk.mp3" id="14_8a0ay"]
+[ext_resource type="AudioStream" uid="uid://b0urg5a5oqajx" path="res://level1.2.mp3" id="14_0em74"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6nh56"]
 texture = ExtResource("2_wqe4f")
@@ -803,6 +803,6 @@ here"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(1083, 7)
-stream = ExtResource("14_8a0ay")
+stream = ExtResource("14_0em74")
 volume_db = 13.867
 autoplay = true
