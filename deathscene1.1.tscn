@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://cvuwuo7twgagd"]
+[gd_scene load_steps=17 format=3 uid="uid://cvuwuo7twgagd"]
 
 [ext_resource type="Texture2D" uid="uid://pgmuth82mqvf" path="res://donut.png" id="1_iiv4w"]
+[ext_resource type="Script" uid="uid://cke1qwjw5u2ks" path="res://deathscene_1.1.gd" id="1_nuped"]
 [ext_resource type="Texture2D" uid="uid://cdkgow88bfqpm" path="res://wave1.png" id="2_4mey1"]
 [ext_resource type="Texture2D" uid="uid://b516uxm7hb3rb" path="res://vasa 2.png" id="3_nuped"]
 [ext_resource type="Texture2D" uid="uid://lwfkl32jq45u" path="res://doggo surf.png" id="4_oiaby"]
@@ -73,6 +74,7 @@ corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_nuped")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 579.0
@@ -172,3 +174,5 @@ stream = ExtResource("7_4mey1")
 volume_db = 13.867
 pitch_scale = 1.32
 autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
