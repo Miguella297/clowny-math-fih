@@ -1,3 +1,158 @@
-[gd_scene format=3 uid="uid://dtncoi3rpoiv4"]
+[gd_scene load_steps=15 format=3 uid="uid://dtncoi3rpoiv4"]
+
+[ext_resource type="Script" uid="uid://6fp06q22wa72" path="res://deathscene_2.gd" id="1_fnge2"]
+[ext_resource type="Texture2D" uid="uid://dp56vcfantc6y" path="res://beach.png" id="1_h0sxb"]
+[ext_resource type="Texture2D" uid="uid://btihxueli7mbr" path="res://bech.png" id="2_475tv"]
+[ext_resource type="Texture2D" uid="uid://pgmuth82mqvf" path="res://donut.png" id="2_j3fvc"]
+[ext_resource type="Texture2D" uid="uid://d2077s87puh6m" path="res://air.png" id="3_fnge2"]
+[ext_resource type="FontFile" uid="uid://dcpqplvq1hlym" path="res://ThisAppeal-FreeDemo.ttf" id="5_a6cgk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f0vyh"]
+texture = ExtResource("1_h0sxb")
+modulate_color = Color(0.678431, 0.772549, 0.772549, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5w18o"]
+texture = ExtResource("2_475tv")
+modulate_color = Color(0.701961, 1, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0c3wv"]
+texture = ExtResource("3_fnge2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_475tv"]
+texture = ExtResource("2_j3fvc")
+modulate_color = Color(0.52549, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_475tv"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.517647, 0.8, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnge2"]
+bg_color = Color(0.6, 0.6, 0.6, 0.364706)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.309804, 0.8, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5w18o"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.8, 0, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6cgk"]
+bg_color = Color(0.94902, 0.878431, 0.815686, 0.490196)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.8, 0, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_fnge2")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 579.0
+offset_bottom = 329.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_f0vyh")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 579.0
+offset_right = 1153.0
+offset_bottom = 329.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5w18o")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_top = 329.0
+offset_right = 579.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_0c3wv")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 579.0
+offset_top = 329.0
+offset_right = 1151.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_475tv")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 346.0
+offset_top = 56.0
+offset_right = 819.0
+offset_bottom = 249.0
+theme_override_colors/font_color = Color(0.894118, 1, 0, 1)
+theme_override_fonts/font = ExtResource("5_a6cgk")
+theme_override_font_sizes/font_size = 100
+text = "Stop dying monkey
+"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 265.0
+offset_top = 176.0
+offset_right = 890.0
+offset_bottom = 343.0
+theme_override_colors/font_disabled_color = Color(0, 0.756863, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.835294, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.811765, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.8, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.823529, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.811765, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.796078, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.811765, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.819608, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.811765, 0, 1)
+theme_override_colors/font_color = Color(0, 0.835294, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0.811765, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.866667, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_475tv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fnge2")
+text = "Try again"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 265.0
+offset_top = 366.0
+offset_right = 893.0
+offset_bottom = 531.0
+theme_override_colors/font_disabled_color = Color(0.8, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.823529, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.835294, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.827451, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.839216, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.839216, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0.827451, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.835294, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.85098, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.878431, 0, 0, 1)
+theme_override_colors/font_color = Color(0.85098, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.866667, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.847059, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_5w18o")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6cgk")
+text = "Main menu (Losers)"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
