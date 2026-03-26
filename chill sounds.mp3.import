@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgq8qe46tgusn"
+path="res://.godot/imported/chill sounds.mp3-da4c9df26cc91230c857391a38749a14.mp3str"
+
+[deps]
+
+source_file="res://chill sounds.mp3"
+dest_files=["res://.godot/imported/chill sounds.mp3-da4c9df26cc91230c857391a38749a14.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
