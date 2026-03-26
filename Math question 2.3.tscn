@@ -1,62 +1,60 @@
-[gd_scene load_steps=16 format=3 uid="uid://dyrm8k3wuea3g"]
+[gd_scene load_steps=15 format=3 uid="uid://cinsx68enbiet"]
 
-[ext_resource type="Texture2D" uid="uid://bf00ro2srqpau" path="res://wave 2.png" id="1_fjjhn"]
-[ext_resource type="Script" uid="uid://df5e6x73haraa" path="res://math_question_2.1.gd" id="1_huw3k"]
-[ext_resource type="Texture2D" uid="uid://bewmiesg3adjv" path="res://ocean 1.png" id="2_4ippj"]
-[ext_resource type="Texture2D" uid="uid://ddgp0jttf62sk" path="res://Turtlee.png" id="2_etnry"]
-[ext_resource type="FontFile" uid="uid://dyktuwt0dpy1j" path="res://Super Popstar.ttf" id="4_4ippj"]
-[ext_resource type="AudioStream" uid="uid://dgq8qe46tgusn" path="res://chill sounds.mp3" id="6_pdsc8"]
+[ext_resource type="Texture2D" uid="uid://bf00ro2srqpau" path="res://wave 2.png" id="1_aq4ap"]
+[ext_resource type="Texture2D" uid="uid://bewmiesg3adjv" path="res://ocean 1.png" id="2_a7743"]
+[ext_resource type="Texture2D" uid="uid://ddgp0jttf62sk" path="res://Turtlee.png" id="3_7uk3y"]
+[ext_resource type="FontFile" uid="uid://dyktuwt0dpy1j" path="res://Super Popstar.ttf" id="4_umjl3"]
+[ext_resource type="AudioStream" uid="uid://dgq8qe46tgusn" path="res://chill sounds.mp3" id="5_y0qkm"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ippj"]
-texture = ExtResource("1_fjjhn")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xceox"]
+texture = ExtResource("1_aq4ap")
 modulate_color = Color(0.355109, 0.755317, 0.91441, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pdsc8"]
-texture = ExtResource("2_4ippj")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rxqdc"]
+texture = ExtResource("2_a7743")
 modulate_color = Color(0, 0.803563, 0.808464, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_huw3k"]
-texture = ExtResource("2_etnry")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bgimk"]
+texture = ExtResource("3_7uk3y")
 modulate_color = Color(0.0533574, 0.726699, 0.703358, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ippj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsu7n"]
 bg_color = Color(0.666151, 0.0633964, 0.260186, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_huw3k"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2eqr"]
 bg_color = Color(0.951912, 0.342034, 0.617586, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pdsc8"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvh2u"]
 bg_color = Color(0.190908, 0.32443, 0.0672821, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwptm"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6uofl"]
 bg_color = Color(0.437422, 0.675106, 0.329026, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wcvlp"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1mtn"]
 bg_color = Color(0.47596, 0.213797, 0.0273308, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynaaw"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g21ud"]
 bg_color = Color(1, 0.355948, 0.0983852, 1)
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_huw3k")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 1151.0
 offset_bottom = 348.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_4ippj")
+theme_override_styles/panel = SubResource("StyleBoxTexture_xceox")
 
 [node name="Panel2" type="Panel" parent="."]
 offset_top = 348.0
 offset_right = 574.0
 offset_bottom = 648.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_pdsc8")
+theme_override_styles/panel = SubResource("StyleBoxTexture_rxqdc")
 
 [node name="Panel3" type="Panel" parent="."]
 offset_left = 574.0
 offset_top = 348.0
 offset_right = 1153.0
 offset_bottom = 648.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_huw3k")
+theme_override_styles/panel = SubResource("StyleBoxTexture_bgimk")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 337.0
@@ -65,7 +63,7 @@ offset_right = 836.0
 offset_bottom = 141.0
 theme_override_colors/font_color = Color(0.494118, 1, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.00430507, 0.00699661, 3.76021e-10, 1)
-theme_override_fonts/font = ExtResource("4_4ippj")
+theme_override_fonts/font = ExtResource("4_umjl3")
 theme_override_font_sizes/font_size = 80
 text = "What is √64 ?"
 
@@ -89,8 +87,8 @@ theme_override_colors/font_color = Color(0, 0, 0.792157, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0.772549, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0.741176, 1)
 theme_override_font_sizes/font_size = 80
-theme_override_styles/hover = SubResource("StyleBoxFlat_4ippj")
-theme_override_styles/normal = SubResource("StyleBoxFlat_huw3k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qsu7n")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a2eqr")
 text = "7"
 
 [node name="Button2" type="Button" parent="."]
@@ -112,8 +110,8 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 80
-theme_override_styles/hover = SubResource("StyleBoxFlat_pdsc8")
-theme_override_styles/normal = SubResource("StyleBoxFlat_qwptm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rvh2u")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6uofl")
 text = "4.25
 "
 
@@ -136,17 +134,13 @@ theme_override_colors/font_color = Color(0, 0.913725, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0.941176, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0.921569, 0, 1)
 theme_override_font_sizes/font_size = 80
-theme_override_styles/hover = SubResource("StyleBoxFlat_wcvlp")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ynaaw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b1mtn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_g21ud")
 text = "8
 "
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(1354, 456)
-stream = ExtResource("6_pdsc8")
+stream = ExtResource("5_y0qkm")
 volume_db = 24.0
 autoplay = true
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

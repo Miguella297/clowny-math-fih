@@ -1,0 +1,152 @@
+[gd_scene load_steps=16 format=3 uid="uid://d4abfb4wfrjwa"]
+
+[ext_resource type="Script" uid="uid://42ciifrqrq17" path="res://math_question_2.2.gd" id="1_0wivc"]
+[ext_resource type="Texture2D" uid="uid://bf00ro2srqpau" path="res://wave 2.png" id="1_vrdqw"]
+[ext_resource type="Texture2D" uid="uid://bewmiesg3adjv" path="res://ocean 1.png" id="2_0wivc"]
+[ext_resource type="Texture2D" uid="uid://ddgp0jttf62sk" path="res://Turtlee.png" id="3_sfswc"]
+[ext_resource type="AudioStream" uid="uid://dgq8qe46tgusn" path="res://chill sounds.mp3" id="5_n3wlw"]
+[ext_resource type="FontFile" uid="uid://dewo183t8jt01" path="res://Bakso Menu TTF.ttf" id="5_sfswc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qjq2v"]
+texture = ExtResource("1_vrdqw")
+modulate_color = Color(0.355109, 0.755317, 0.91441, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gg1tw"]
+texture = ExtResource("2_0wivc")
+modulate_color = Color(0, 0.803563, 0.808464, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p43rv"]
+texture = ExtResource("3_sfswc")
+modulate_color = Color(0.0533574, 0.726699, 0.703358, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_douqb"]
+bg_color = Color(0.121569, 0.0627451, 0.258824, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bgco"]
+bg_color = Color(0.482353, 0.537255, 0.615686, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5ac4"]
+bg_color = Color(0.120611, 0.120604, 0.0316981, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_caqvp"]
+bg_color = Color(0.439216, 0.227451, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ve5yx"]
+bg_color = Color(0.47596, 0.213797, 0.0273308, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xktji"]
+bg_color = Color(1, 0.355948, 0.0983852, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0wivc")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1151.0
+offset_bottom = 348.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qjq2v")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_top = 348.0
+offset_right = 574.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gg1tw")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 574.0
+offset_top = 348.0
+offset_right = 1153.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_p43rv")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 252.0
+offset_top = -6.0
+offset_right = 893.0
+offset_bottom = 118.0
+scale = Vector2(0.992312, 1.27511)
+theme_override_colors/font_color = Color(0.494118, 0.227451, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.00430507, 0.00699661, 3.76021e-10, 1)
+theme_override_fonts/font = ExtResource("5_sfswc")
+theme_override_font_sizes/font_size = 80
+text = "What is 72/6?"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 274.0
+offset_top = 153.0
+offset_right = 856.0
+offset_bottom = 301.0
+scale = Vector2(1.00457, 0.949102)
+theme_override_colors/font_disabled_color = Color(0, 0.901961, 0.701961, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.905882, 0.713726, 1)
+theme_override_colors/font_hover_color = Color(0, 0.972549, 0.705882, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.929412, 0.717647, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.960784, 0.72549, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.94902, 0.705882, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.984314, 0.737255, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.968627, 0.741176, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.984314, 0.768627, 1)
+theme_override_colors/font_outline_color = Color(0, 0.921569, 0.752941, 1)
+theme_override_colors/font_color = Color(0, 0.968627, 0.792157, 1)
+theme_override_colors/font_focus_color = Color(0, 0.956863, 0.772549, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.960784, 0.741176, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/hover = SubResource("StyleBoxFlat_douqb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7bgco")
+text = "12"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 272.0
+offset_top = 307.0
+offset_right = 860.0
+offset_bottom = 440.0
+theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/hover = SubResource("StyleBoxFlat_l5ac4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_caqvp")
+text = "11
+"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 271.0
+offset_top = 449.0
+offset_right = 859.0
+offset_bottom = 592.0
+theme_override_colors/font_disabled_color = Color(0.963775, 0.816502, 0.242486, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.960456, 0.8207, 0.131337, 1)
+theme_override_colors/font_hover_color = Color(0.932942, 0.832341, 0.184953, 1)
+theme_override_colors/icon_disabled_color = Color(0.970416, 0.814817, 0.187443, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.943775, 0.824819, 0.274478, 1)
+theme_override_colors/icon_hover_color = Color(0.917088, 0.786136, 0.0984613, 1)
+theme_override_colors/icon_pressed_color = Color(0.949406, 0.822784, 0.257954, 1)
+theme_override_colors/icon_focus_color = Color(0.932901, 0.831679, 0.212715, 1)
+theme_override_colors/icon_normal_color = Color(0.953412, 0.821119, 0.251677, 1)
+theme_override_colors/font_outline_color = Color(0.875319, 0.775754, 0.065271, 1)
+theme_override_colors/font_color = Color(0.909206, 0.733396, 0.121143, 1)
+theme_override_colors/font_focus_color = Color(0.912413, 0.767936, 0.110611, 1)
+theme_override_colors/font_pressed_color = Color(0.920887, 0.737452, 0.141145, 1)
+theme_override_font_sizes/font_size = 80
+theme_override_styles/hover = SubResource("StyleBoxFlat_ve5yx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xktji")
+text = "13.333"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1354, 456)
+stream = ExtResource("5_n3wlw")
+volume_db = 24.0
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
