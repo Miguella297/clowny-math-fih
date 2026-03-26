@@ -1,3 +1,43 @@
-[gd_scene format=3 uid="uid://cf0w2os2dlayw"]
+[gd_scene load_steps=7 format=3 uid="uid://cf0w2os2dlayw"]
+
+[ext_resource type="Texture2D" uid="uid://doh1i06tml7gj" path="res://mathmen 2.png" id="1_82ud6"]
+[ext_resource type="Script" uid="uid://du5w8r8erfo4w" path="res://area_2d_2+10.gd" id="2_xyk3u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyk3u"]
+atlas = ExtResource("1_82ud6")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htkel"]
+atlas = ExtResource("1_82ud6")
+region = Rect2(0, 80, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4yiau"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xyk3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htkel")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_82ud6"]
+radius = 15.0
+height = 62.0
 
 [node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_4yiau")
+
+[node name="Area2D2+10" type="Area2D" parent="AnimatedSprite2D"]
+script = ExtResource("2_xyk3u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D2+10"]
+position = Vector2(22, -5)
+shape = SubResource("CapsuleShape2D_82ud6")
