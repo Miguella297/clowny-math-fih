@@ -1,3 +1,145 @@
-[gd_scene format=3 uid="uid://dirplo76dxidd"]
+[gd_scene load_steps=13 format=3 uid="uid://dirplo76dxidd"]
+
+[ext_resource type="Script" uid="uid://diyl0pu45qpr1" path="res://deathscene_2.1.gd" id="1_ookaf"]
+[ext_resource type="Texture2D" uid="uid://d4g182canx028" path="res://midnight lake.png" id="1_s5tbd"]
+[ext_resource type="Texture2D" uid="uid://x6rp6tiqu3g6" path="res://lake city.png" id="2_ookaf"]
+[ext_resource type="Texture2D" uid="uid://cqqgwy0onw2xf" path="res://rocky shore.png" id="3_moiif"]
+[ext_resource type="FontFile" uid="uid://be1mf6ljy0kbi" path="res://Song of Valentine Sans.otf" id="4_chwbu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6arp3"]
+texture = ExtResource("1_s5tbd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1g6ir"]
+texture = ExtResource("2_ookaf")
+modulate_color = Color(0.641934, 0.641934, 0.641934, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c0h3e"]
+texture = ExtResource("3_moiif")
+modulate_color = Color(0.545098, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2gw3"]
+bg_color = Color(0.156863, 0.690196, 0.921569, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0.8, 0.8, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lba32"]
+bg_color = Color(0.6, 0.6, 0.6, 0.517647)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.0313726, 0.8, 0.8, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5tbd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.8, 0.258824, 1)
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ookaf"]
+bg_color = Color(0.6, 0.6, 0.6, 0.501961)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.8, 0.337255, 1)
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_ookaf")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 379.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6arp3")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 379.0
+offset_right = 775.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1g6ir")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 775.0
+offset_right = 1155.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_c0h3e")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 420.0
+offset_top = 67.0
+offset_right = 730.0
+offset_bottom = 163.0
+theme_override_colors/font_color = Color(0, 0.917647, 0, 1)
+theme_override_fonts/font = ExtResource("4_chwbu")
+theme_override_font_sizes/font_size = 70
+text = "Stop that"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 244.0
+offset_top = 174.0
+offset_right = 923.0
+offset_bottom = 330.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0.85098, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0.858824, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0.827451, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0.854902, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0.85098, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0.878431, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0.839216, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0.858824, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0.866667, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.87451, 1)
+theme_override_colors/font_color = Color(0, 0, 0.929412, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.890196, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.882353, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/hover = SubResource("StyleBoxFlat_c2gw3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lba32")
+text = "Again?"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 244.0
+offset_top = 349.0
+offset_right = 925.0
+offset_bottom = 505.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0.65098, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0.67451, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0.65098, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0.67451, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0.768627, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0.65098, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0.701961, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0.745098, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.662745, 1)
+theme_override_colors/font_color = Color(0, 0, 0.737255, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0.733333, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0.733333, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/hover = SubResource("StyleBoxFlat_s5tbd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ookaf")
+text = "Nah.."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
