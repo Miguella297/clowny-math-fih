@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dirplo76dxidd"]
+[gd_scene load_steps=14 format=3 uid="uid://dirplo76dxidd"]
 
 [ext_resource type="Script" uid="uid://diyl0pu45qpr1" path="res://deathscene_2.1.gd" id="1_ookaf"]
 [ext_resource type="Texture2D" uid="uid://d4g182canx028" path="res://midnight lake.png" id="1_s5tbd"]
 [ext_resource type="Texture2D" uid="uid://x6rp6tiqu3g6" path="res://lake city.png" id="2_ookaf"]
 [ext_resource type="Texture2D" uid="uid://cqqgwy0onw2xf" path="res://rocky shore.png" id="3_moiif"]
 [ext_resource type="FontFile" uid="uid://be1mf6ljy0kbi" path="res://Song of Valentine Sans.otf" id="4_chwbu"]
+[ext_resource type="AudioStream" uid="uid://bwq3h54agf54k" path="res://death sound 2.mp3" id="6_moiif"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6arp3"]
 texture = ExtResource("1_s5tbd")
@@ -140,6 +141,13 @@ theme_override_font_sizes/font_size = 70
 theme_override_styles/hover = SubResource("StyleBoxFlat_s5tbd")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ookaf")
 text = "Nah.."
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2358, 881.5)
+stream = ExtResource("6_moiif")
+volume_db = 24.0
+pitch_scale = 0.85
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

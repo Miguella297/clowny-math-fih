@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dtncoi3rpoiv4"]
+[gd_scene load_steps=16 format=3 uid="uid://dtncoi3rpoiv4"]
 
 [ext_resource type="Script" uid="uid://6fp06q22wa72" path="res://deathscene_2.gd" id="1_fnge2"]
 [ext_resource type="Texture2D" uid="uid://dp56vcfantc6y" path="res://beach.png" id="1_h0sxb"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://pgmuth82mqvf" path="res://donut.png" id="2_j3fvc"]
 [ext_resource type="Texture2D" uid="uid://d2077s87puh6m" path="res://air.png" id="3_fnge2"]
 [ext_resource type="FontFile" uid="uid://dcpqplvq1hlym" path="res://ThisAppeal-FreeDemo.ttf" id="5_a6cgk"]
+[ext_resource type="AudioStream" uid="uid://bwq3h54agf54k" path="res://death sound 2.mp3" id="7_a6cgk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f0vyh"]
 texture = ExtResource("1_h0sxb")
@@ -153,6 +154,12 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_5w18o")
 theme_override_styles/normal = SubResource("StyleBoxFlat_a6cgk")
 text = "Main menu (Losers)"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2114, 532.5)
+stream = ExtResource("7_a6cgk")
+volume_db = 24.0
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

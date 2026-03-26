@@ -21,6 +21,15 @@ modulate_color = Color(0.0533574, 0.726699, 0.703358, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsu7n"]
 bg_color = Color(0.666667, 0.0627451, 0.258824, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.172549, 0.8, 0.8, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2eqr"]
 bg_color = Color(0.843137, 0.733333, 1, 0.52549)

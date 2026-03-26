@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://b3v2b4fdd2cwa"]
+[gd_scene load_steps=61 format=3 uid="uid://b3v2b4fdd2cwa"]
 
 [ext_resource type="Texture2D" uid="uid://cjlokp3nlgo3" path="res://fishy2.png" id="1_r40rm"]
 [ext_resource type="Texture2D" uid="uid://bc8hhq6dp6pw0" path="res://Terrain (16x16).png" id="2_6q4t8"]
@@ -10,8 +10,9 @@
 [ext_resource type="Script" uid="uid://dx537lsdg4p6x" path="res://area_2d_2+3.gd" id="8_rmy57"]
 [ext_resource type="PackedScene" uid="uid://sh460f0d8d3d" path="res://enemy.tscn" id="9_qulpo"]
 [ext_resource type="PackedScene" uid="uid://cf0w2os2dlayw" path="res://mathmen 2.tscn" id="10_jifot"]
+[ext_resource type="AudioStream" uid="uid://dshun30i1xwg4" path="res://level2.mp3" id="11_3opl0"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8tcn8"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3opl0"]
 texture = ExtResource("2_6q4t8")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -304,9 +305,9 @@ texture = ExtResource("2_6q4t8")
 
 [sub_resource type="TileSet" id="TileSet_r6vdu"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_8tcn8")
+sources/0 = SubResource("TileSetAtlasSource_3opl0")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r6vdu"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dc5vx"]
 texture = ExtResource("4_8tcn8")
 0:0/0 = 0
 1:0/0 = 0
@@ -314,14 +315,14 @@ texture = ExtResource("4_8tcn8")
 1:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_21xmu"]
-sources/0 = SubResource("TileSetAtlasSource_r6vdu")
+sources/0 = SubResource("TileSetAtlasSource_dc5vx")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_21xmu"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s8oj7"]
 texture = ExtResource("5_r6vdu")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_8i3m3"]
-sources/0 = SubResource("TileSetAtlasSource_21xmu")
+sources/0 = SubResource("TileSetAtlasSource_s8oj7")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6vdu"]
 size = Vector2(30.5, 7.5)
@@ -440,9 +441,6 @@ size = Vector2(30, 7)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_86mrq"]
 size = Vector2(29, 7)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrkgn"]
-size = Vector2(12, 7)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbuj2"]
 size = Vector2(29, 7)
 
@@ -452,6 +450,9 @@ size = Vector2(14, 7)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1461n"]
 size = Vector2(31, 7)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrkgn"]
+size = Vector2(12, 7)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -459,6 +460,7 @@ texture_filter = 1
 offset_right = 1154.0
 offset_bottom = 644.0
 texture = ExtResource("1_r40rm")
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -647,10 +649,6 @@ shape = SubResource("RectangleShape2D_ocb40")
 position = Vector2(577, 111.5)
 shape = SubResource("RectangleShape2D_86mrq")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Area2D2+3"]
-position = Vector2(746, 127.5)
-shape = SubResource("RectangleShape2D_wrkgn")
-
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Area2D2+3"]
 position = Vector2(689.5, 144.5)
 shape = SubResource("RectangleShape2D_fbuj2")
@@ -663,8 +661,18 @@ shape = SubResource("RectangleShape2D_dak4d")
 position = Vector2(178.5, 127.5)
 shape = SubResource("RectangleShape2D_1461n")
 
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Area2D2+3"]
+position = Vector2(746, 127.5)
+shape = SubResource("RectangleShape2D_wrkgn")
+
 [node name="Node2D" parent="." instance=ExtResource("9_qulpo")]
 position = Vector2(277, 589)
 
 [node name="Node2D2" parent="." instance=ExtResource("10_jifot")]
 position = Vector2(174, 586)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2114, 532.5)
+stream = ExtResource("11_3opl0")
+volume_db = 24.0
+autoplay = true

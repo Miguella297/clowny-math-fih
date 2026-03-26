@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://c8equh1snrbos"]
+[gd_scene load_steps=13 format=3 uid="uid://c8equh1snrbos"]
 
 [ext_resource type="Script" uid="uid://cxp5p0gp1064b" path="res://deathscene_2.2.gd" id="1_bdn57"]
 [ext_resource type="Texture2D" uid="uid://cjlokp3nlgo3" path="res://fishy2.png" id="1_fimdn"]
 [ext_resource type="Texture2D" uid="uid://dpvgmc4crwe78" path="res://math fih.png" id="2_hn605"]
 [ext_resource type="FontFile" uid="uid://budea0jkottxd" path="res://AUGUSTUS.TTF" id="3_bdn57"]
 [ext_resource type="FontFile" uid="uid://b0puonfennwt4" path="res://GrimeSlime-Regular.ttf" id="4_hn605"]
+[ext_resource type="AudioStream" uid="uid://bwq3h54agf54k" path="res://death sound 2.mp3" id="6_d4p1e"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d4p1e"]
 texture = ExtResource("1_fimdn")
@@ -107,6 +108,13 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_hn605")
 theme_override_font_sizes/font_size = 30
 text = "Lucky for you..."
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2114, 532.5)
+stream = ExtResource("6_d4p1e")
+volume_db = 24.0
+pitch_scale = 1.41
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
