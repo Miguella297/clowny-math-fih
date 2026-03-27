@@ -1,3 +1,165 @@
-[gd_scene format=3 uid="uid://duken75mijj46"]
+[gd_scene load_steps=20 format=3 uid="uid://duken75mijj46"]
+
+[ext_resource type="Texture2D" uid="uid://dcn0jnj86kqw6" path="res://celebrate.png" id="1_046vj"]
+[ext_resource type="Script" uid="uid://ccy3rhy42mjm4" path="res://congratulations!.gd" id="1_bxe51"]
+[ext_resource type="Texture2D" uid="uid://coain6mn2a6sc" path="res://celebrate 2.png" id="2_3to03"]
+[ext_resource type="Texture2D" uid="uid://pxlnx8h3p4r6" path="res://fish celebrate.png" id="3_5fij8"]
+[ext_resource type="Texture2D" uid="uid://cdkgow88bfqpm" path="res://wave1.png" id="4_pr553"]
+[ext_resource type="Texture2D" uid="uid://bf00ro2srqpau" path="res://wave 2.png" id="5_bxe51"]
+[ext_resource type="Texture2D" uid="uid://x6rp6tiqu3g6" path="res://lake city.png" id="6_l63io"]
+[ext_resource type="FontFile" uid="uid://be1mf6ljy0kbi" path="res://Song of Valentine Sans.otf" id="7_3to03"]
+[ext_resource type="FontFile" uid="uid://bmvd833va1ejr" path="res://Almond Milky.otf" id="8_5fij8"]
+[ext_resource type="FontFile" uid="uid://dewo183t8jt01" path="res://Bakso Menu TTF.ttf" id="10_l63io"]
+[ext_resource type="AudioStream" uid="uid://tmo4gui4ss5k" path="res://celeb.mp3" id="11_l63io"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1c2ia"]
+texture = ExtResource("1_046vj")
+modulate_color = Color(1, 1, 0.2, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j0pma"]
+texture = ExtResource("2_3to03")
+modulate_color = Color(0.67069, 0.67069, 0.67069, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2r6mn"]
+texture = ExtResource("3_5fij8")
+modulate_color = Color(0.589096, 0.589096, 0.589096, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t60er"]
+texture = ExtResource("4_pr553")
+modulate_color = Color(0.716296, 0.716296, 0.716296, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dllmh"]
+texture = ExtResource("5_bxe51")
+modulate_color = Color(0.753984, 0.753984, 0.753984, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_smvij"]
+texture = ExtResource("6_l63io")
+modulate_color = Color(0.699653, 0.699653, 0.699653, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5fij8"]
+bg_color = Color(0.0941176, 0.6, 0.6, 0.25098)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.415686, 0.8, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pr553"]
+bg_color = Color(0.239216, 0.6, 0.6, 0.376471)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.8, 0.164706, 0.8, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_bxe51")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 359.0
+offset_bottom = 340.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1c2ia")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 359.0
+offset_right = 818.0
+offset_bottom = 341.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_j0pma")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 818.0
+offset_right = 1152.0
+offset_bottom = 341.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2r6mn")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_top = 340.0
+offset_right = 359.0
+offset_bottom = 649.0
+scale = Vector2(1.00837, 0.99043)
+theme_override_styles/panel = SubResource("StyleBoxTexture_t60er")
+
+[node name="Panel5" type="Panel" parent="."]
+offset_left = 359.0
+offset_top = 341.0
+offset_right = 818.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_dllmh")
+
+[node name="Panel6" type="Panel" parent="."]
+offset_left = 818.0
+offset_top = 341.0
+offset_right = 1151.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_smvij")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 262.0
+offset_top = 43.0
+offset_right = 903.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(1, 0.658824, 0.0352941, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_3to03")
+theme_override_font_sizes/font_size = 80
+text = "Congratulations!"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 196.0
+offset_top = 142.0
+offset_right = 1016.0
+offset_bottom = 197.0
+theme_override_colors/font_color = Color(0.25285, 0.925007, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_5fij8")
+theme_override_font_sizes/font_size = 40
+text = "You completed the default levels (thus far)"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 280.0
+offset_top = 236.0
+offset_right = 896.0
+offset_bottom = 407.0
+theme_override_colors/font_disabled_color = Color(0.917647, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.878431, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.839216, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.890196, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.835294, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.866667, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0.8, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.85098, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.862745, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.796078, 0, 0, 1)
+theme_override_colors/font_color = Color(0.807843, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.85098, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.870588, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_5fij8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pr553")
+text = "Main menu"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 115.0
+offset_top = 429.0
+offset_right = 1073.0
+offset_bottom = 491.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_l63io")
+theme_override_font_sizes/font_size = 40
+text = "P.S. Try some of our minigame levels next "
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2394, 768.5)
+stream = ExtResource("11_l63io")
+volume_db = 24.0
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
