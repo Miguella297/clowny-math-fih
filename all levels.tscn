@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://coaoiecle8u1p"]
+[gd_scene load_steps=15 format=3 uid="uid://coaoiecle8u1p"]
 
 [ext_resource type="Texture2D" uid="uid://cdkgow88bfqpm" path="res://wave1.png" id="1_jri8r"]
 [ext_resource type="Script" uid="uid://b0krnhcun55w8" path="res://all_levels.gd" id="1_xtqa4"]
 [ext_resource type="FontFile" uid="uid://d11gv0vnt3tqw" path="res://Valen Valentine Script.otf" id="2_vxump"]
 [ext_resource type="FontFile" uid="uid://dhjx7eiulc476" path="res://Casual Sunday.otf" id="3_vxump"]
 [ext_resource type="FontFile" uid="uid://dcpqplvq1hlym" path="res://ThisAppeal-FreeDemo.ttf" id="5_jsvob"]
+[ext_resource type="FontFile" uid="uid://dygtl1ij4lt0" path="res://DropShade-Outline.ttf" id="6_51qws"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtqa4"]
 bg_color = Color(0.192278, 0.247935, 0.0391988, 1)
@@ -41,6 +42,30 @@ bg_color = Color(0.546139, 0.488278, 0.177837, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gn6b3"]
 bg_color = Color(0.702219, 0.589835, 0.223527, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lngw2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.8, 0.462745, 0.8, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nciq0"]
+bg_color = Color(0.6, 0.6, 0.6, 0.337255)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.8, 0.270588, 0.8, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_xtqa4")
@@ -142,6 +167,31 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_7pjs7")
 theme_override_styles/normal = SubResource("StyleBoxFlat_gn6b3")
 text = "Math level 2: Larger than life - Backstreet boys."
 
+[node name="Button4" type="Button" parent="."]
+offset_left = 905.0
+offset_top = 27.0
+offset_right = 1147.0
+offset_bottom = 116.0
+theme_override_colors/font_disabled_color = Color(1, 0.854902, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.811765, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.890196, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0.929412, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.968627, 0.87451, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.984314, 0.890196, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.882353, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.988235, 0.835294, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 0.854902, 0, 1)
+theme_override_colors/font_outline_color = Color(0.97537, 0.885611, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0.882353, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.905882, 0, 1)
+theme_override_fonts/font = ExtResource("6_51qws")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_lngw2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nciq0")
+text = "Minigames"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
