@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://coaoiecle8u1p"]
+[gd_scene load_steps=18 format=3 uid="uid://coaoiecle8u1p"]
 
 [ext_resource type="Texture2D" uid="uid://cdkgow88bfqpm" path="res://wave1.png" id="1_jri8r"]
 [ext_resource type="Script" uid="uid://b0krnhcun55w8" path="res://all_levels.gd" id="1_xtqa4"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://dhjx7eiulc476" path="res://Casual Sunday.otf" id="3_vxump"]
 [ext_resource type="FontFile" uid="uid://dcpqplvq1hlym" path="res://ThisAppeal-FreeDemo.ttf" id="5_jsvob"]
 [ext_resource type="FontFile" uid="uid://dygtl1ij4lt0" path="res://DropShade-Outline.ttf" id="6_51qws"]
+[ext_resource type="FontFile" uid="uid://b8ud8pwm118c5" path="res://Super Starfish.ttf" id="7_7u02d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtqa4"]
 bg_color = Color(0.192278, 0.247935, 0.0391988, 1)
@@ -66,6 +67,12 @@ corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ou8rs"]
+bg_color = Color(0.034335, 0.285581, 0.323874, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgh7m"]
+bg_color = Color(0.0978475, 0.369129, 0.379537, 1)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_xtqa4")
@@ -191,7 +198,32 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_lngw2")
 theme_override_styles/normal = SubResource("StyleBoxFlat_nciq0")
 text = "Minigames"
 
+[node name="Button5" type="Button" parent="."]
+offset_left = 38.0
+offset_top = 353.0
+offset_right = 585.0
+offset_bottom = 445.0
+theme_override_colors/font_disabled_color = Color(0, 0.972549, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.94902, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.929412, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.921569, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.941176, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.929412, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.929412, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.94902, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.929412, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.960784, 0, 1)
+theme_override_colors/font_color = Color(0, 0.968627, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0.941176, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.94902, 0, 1)
+theme_override_fonts/font = ExtResource("7_7u02d")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_ou8rs")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jgh7m")
+text = "Math Level 3: Eyes Closed - Jisoo and Zayn"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
