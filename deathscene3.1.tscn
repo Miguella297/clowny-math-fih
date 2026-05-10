@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://o2ed8n5odbu2"]
+[gd_scene load_steps=14 format=3 uid="uid://o2ed8n5odbu2"]
 
 [ext_resource type="Texture2D" uid="uid://dlixeibnbymou" path="res://Hoppers1.png" id="1_c136b"]
 [ext_resource type="Script" uid="uid://cf1jhqnassclo" path="res://deathscene_3.1.gd" id="1_ynkip"]
 [ext_resource type="Texture2D" uid="uid://dmt0m2yg12dut" path="res://Hoppers2.png" id="2_ynkip"]
 [ext_resource type="Texture2D" uid="uid://onsk55filor8" path="res://Hoppers3.png" id="3_nfd0r"]
 [ext_resource type="FontFile" uid="uid://x0d43sopbku1" path="res://mangat.ttf" id="4_lyle1"]
+[ext_resource type="AudioStream" uid="uid://cwnocjol3ahy1" path="res://Death 3.1.mp3" id="6_nfd0r"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ira5x"]
 texture = ExtResource("1_c136b")
@@ -142,6 +143,12 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_nfd0r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_lyle1")
 text = "Go home"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1354, 456)
+stream = ExtResource("6_nfd0r")
+volume_db = 14.188
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

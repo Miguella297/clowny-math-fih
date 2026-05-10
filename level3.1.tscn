@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://1jv2pqpcfpwr"]
+[gd_scene load_steps=61 format=3 uid="uid://1jv2pqpcfpwr"]
 
 [ext_resource type="Texture2D" uid="uid://c1rticwhbfrkd" path="res://fihs.png" id="1_era7q"]
 [ext_resource type="Texture2D" uid="uid://bc8hhq6dp6pw0" path="res://Terrain (16x16).png" id="2_cl6ki"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://rpcpadj4nfx4" path="res://enemies MORE.tscn" id="9_kktoc"]
 [ext_resource type="PackedScene" uid="uid://u3q5jsopnpnd" path="res://enamy2!.tscn" id="10_isfed"]
 [ext_resource type="PackedScene" uid="uid://dcpndv3bahmrm" path="res://math bots #3.tscn" id="11_rff4k"]
+[ext_resource type="AudioStream" uid="uid://iptellxwmqsg" path="res://Level 3.1.mp3" id="12_cl6ki"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_era7q"]
 texture = ExtResource("2_cl6ki")
@@ -712,3 +713,9 @@ scale = Vector2(0.970467, 1.06988)
 [node name="Node2D3" parent="." instance=ExtResource("11_rff4k")]
 position = Vector2(1128, 220.421)
 rotation = 0.0474274
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1354, 456)
+stream = ExtResource("12_cl6ki")
+volume_db = 14.0
+autoplay = true

@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://5ivo6l1wq4d7"]
+[gd_scene load_steps=16 format=3 uid="uid://5ivo6l1wq4d7"]
 
 [ext_resource type="Script" uid="uid://cf57vrejgent3" path="res://math_question_3.2.gd" id="1_ljimk"]
 [ext_resource type="Texture2D" uid="uid://bf00ro2srqpau" path="res://wave 2.png" id="2_ax3o3"]
 [ext_resource type="Texture2D" uid="uid://d4g182canx028" path="res://midnight lake.png" id="3_bsdu4"]
 [ext_resource type="Texture2D" uid="uid://pgmuth82mqvf" path="res://donut.png" id="4_gnods"]
 [ext_resource type="FontFile" uid="uid://x0d43sopbku1" path="res://mangat.ttf" id="5_61sbk"]
+[ext_resource type="AudioStream" uid="uid://cytcmkoje1qvp" path="res://Math question 3s.mp3" id="6_ax3o3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lcs4t"]
 texture = ExtResource("2_ax3o3")
@@ -191,6 +192,12 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_hcbkt")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2iqs8")
 text = "56.25
 "
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1354, 456)
+stream = ExtResource("6_ax3o3")
+volume_db = 14.188
+autoplay = true
 
 [connection signal="pressed" from="Buttona" to="." method="_on_buttona_pressed"]
 [connection signal="pressed" from="Buttonb" to="." method="_on_buttonb_pressed"]

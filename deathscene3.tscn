@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bt6hg4lq14t46"]
+[gd_scene load_steps=17 format=3 uid="uid://bt6hg4lq14t46"]
 
 [ext_resource type="Texture2D" uid="uid://lwfkl32jq45u" path="res://doggo surf.png" id="1_0jolq"]
 [ext_resource type="Texture2D" uid="uid://642g0hfj351e" path="res://frog.png" id="1_dji1b"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://crbnitvpbq63a" path="res://math fih 3.png" id="4_y0wpg"]
 [ext_resource type="FontFile" uid="uid://colqo2dt5gbf0" path="res://Bubblegum.ttf" id="5_y0wpg"]
 [ext_resource type="FontFile" uid="uid://dyktuwt0dpy1j" path="res://Super Popstar.ttf" id="6_hh2bv"]
+[ext_resource type="AudioStream" uid="uid://dntexx5rltoiv" path="res://Death 3.mp3" id="8_igx6e"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hh2bv"]
 texture = ExtResource("1_0jolq")
@@ -131,6 +132,12 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_igx6e")
 theme_override_styles/normal = SubResource("StyleBoxFlat_bcisk")
 text = "Main menuu"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1354, 456)
+stream = ExtResource("8_igx6e")
+volume_db = 14.188
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -99,7 +99,7 @@ theme_override_fonts/font = ExtResource("4_umjl3")
 theme_override_font_sizes/font_size = 80
 text = "Is 31 a prime number?"
 
-[node name="Button" type="Button" parent="."]
+[node name="Buttongbdg" type="Button" parent="."]
 offset_left = 287.0
 offset_top = 213.0
 offset_right = 869.0
@@ -153,5 +153,6 @@ stream = ExtResource("5_y0qkm")
 volume_db = 24.0
 autoplay = true
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Buttongbdg" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Buttongbdg" to="." method="_on_buttongbdg_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

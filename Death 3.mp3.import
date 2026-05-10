@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dntexx5rltoiv"
+path="res://.godot/imported/Death 3.mp3-e94ebefe4036e772725c19d54c4c555c.mp3str"
+
+[deps]
+
+source_file="res://Death 3.mp3"
+dest_files=["res://.godot/imported/Death 3.mp3-e94ebefe4036e772725c19d54c4c555c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

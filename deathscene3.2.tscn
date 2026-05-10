@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://b1p0qof16iytb"]
+[gd_scene load_steps=13 format=3 uid="uid://b1p0qof16iytb"]
 
 [ext_resource type="Script" uid="uid://bkxgemip70ige" path="res://deathscene_3.2.gd" id="1_7htym"]
 [ext_resource type="Texture2D" uid="uid://cqqgwy0onw2xf" path="res://rocky shore.png" id="1_qpkuf"]
 [ext_resource type="Texture2D" uid="uid://btihxueli7mbr" path="res://bech.png" id="2_u0lfl"]
 [ext_resource type="FontFile" uid="uid://c5ft6snqqd8gh" path="res://RetroMother-Regular.otf" id="3_7htym"]
 [ext_resource type="FontFile" uid="uid://dyktuwt0dpy1j" path="res://Super Popstar.ttf" id="4_u0lfl"]
+[ext_resource type="AudioStream" uid="uid://cxxj6dnal0nd0" path="res://Death 3.2.mp3" id="6_e4wm2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e4wm2"]
 texture = ExtResource("1_qpkuf")
@@ -146,6 +147,12 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_knbw4")
 theme_override_styles/normal = SubResource("StyleBoxFlat_avppd")
 text = "Main menu"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1354, 456)
+stream = ExtResource("6_e4wm2")
+volume_db = 14.188
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
