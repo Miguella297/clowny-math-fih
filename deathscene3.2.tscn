@@ -1,0 +1,151 @@
+[gd_scene load_steps=12 format=3 uid="uid://b1p0qof16iytb"]
+
+[ext_resource type="Script" uid="uid://bkxgemip70ige" path="res://deathscene_3.2.gd" id="1_7htym"]
+[ext_resource type="Texture2D" uid="uid://cqqgwy0onw2xf" path="res://rocky shore.png" id="1_qpkuf"]
+[ext_resource type="Texture2D" uid="uid://btihxueli7mbr" path="res://bech.png" id="2_u0lfl"]
+[ext_resource type="FontFile" uid="uid://c5ft6snqqd8gh" path="res://RetroMother-Regular.otf" id="3_7htym"]
+[ext_resource type="FontFile" uid="uid://dyktuwt0dpy1j" path="res://Super Popstar.ttf" id="4_u0lfl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e4wm2"]
+texture = ExtResource("1_qpkuf")
+modulate_color = Color(0.749364, 0.735825, 1.92523e-06, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_knbw4"]
+texture = ExtResource("2_u0lfl")
+modulate_color = Color(6.64204e-06, 0.678656, 0.680307, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7htym"]
+bg_color = Color(0.6, 0.376471, 0.6, 0.215686)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.8, 0.133333, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e4wm2"]
+bg_color = Color(0.6, 0.380392, 0.6, 0.419608)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.8, 0.0941176, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knbw4"]
+bg_color = Color(0.764706, 0.533333, 0, 0.235294)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.215686, 0.8, 0.8, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_avppd"]
+bg_color = Color(0.741176, 0.556863, 0.0705882, 0.501961)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.0705882, 0.8, 0.8, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_7htym")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -1.0
+offset_top = -3.0
+offset_right = 1151.0
+offset_bottom = 331.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_e4wm2")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = -1.0
+offset_top = 331.0
+offset_right = 1151.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_knbw4")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 276.0
+offset_top = 71.0
+offset_right = 853.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0, 0, 0.647059, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7htym")
+theme_override_font_sizes/font_size = 70
+text = "Come on Man/Woman"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 222.0
+offset_top = 146.0
+offset_right = 936.0
+offset_bottom = 201.0
+theme_override_colors/font_color = Color(0.0930071, 0.330486, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_u0lfl")
+theme_override_font_sizes/font_size = 40
+text = "\"Aint nobody perfect but its all good\""
+
+[node name="Button" type="Button" parent="."]
+offset_left = 185.0
+offset_top = 214.0
+offset_right = 985.0
+offset_bottom = 391.0
+theme_override_colors/font_disabled_color = Color(0, 0.878431, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.854902, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.854902, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.847059, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.807843, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.847059, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.839216, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.819608, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.823529, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.772549, 0, 1)
+theme_override_colors/font_color = Color(0, 0.847059, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0.8, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.796078, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_7htym")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e4wm2")
+text = "AGAIN"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 184.0
+offset_top = 403.0
+offset_right = 985.0
+offset_bottom = 576.0
+theme_override_colors/font_disabled_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.960784, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_knbw4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_avppd")
+text = "Main menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

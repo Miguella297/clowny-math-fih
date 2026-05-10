@@ -1,0 +1,147 @@
+[gd_scene load_steps=13 format=3 uid="uid://o2ed8n5odbu2"]
+
+[ext_resource type="Texture2D" uid="uid://dlixeibnbymou" path="res://Hoppers1.png" id="1_c136b"]
+[ext_resource type="Script" uid="uid://cf1jhqnassclo" path="res://deathscene_3.1.gd" id="1_ynkip"]
+[ext_resource type="Texture2D" uid="uid://dmt0m2yg12dut" path="res://Hoppers2.png" id="2_ynkip"]
+[ext_resource type="Texture2D" uid="uid://onsk55filor8" path="res://Hoppers3.png" id="3_nfd0r"]
+[ext_resource type="FontFile" uid="uid://x0d43sopbku1" path="res://mangat.ttf" id="4_lyle1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ira5x"]
+texture = ExtResource("1_c136b")
+modulate_color = Color(0.649407, 0.64548, 0.33604, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_elk7f"]
+texture = ExtResource("2_ynkip")
+modulate_color = Color(0.999999, 0.994575, 0.532831, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0osl1"]
+texture = ExtResource("3_nfd0r")
+modulate_color = Color(0.964706, 0.729412, 0.8, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c136b"]
+bg_color = Color(0.6, 1, 0.6, 0.427451)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.266667, 0.8, 0.8, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynkip"]
+bg_color = Color(0.329412, 0.988235, 0.6, 0.32549)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.164706, 0.8, 0.8, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfd0r"]
+bg_color = Color(0.6, 0.901961, 0.6, 0.188235)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.8, 0.188235, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lyle1"]
+bg_color = Color(0.6, 0.937255, 1, 0.309804)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.8, 0.168627, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ynkip")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 385.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ira5x")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 385.0
+offset_right = 787.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_elk7f")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 787.0
+offset_right = 1150.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_0osl1")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 341.0
+offset_top = 136.0
+offset_right = 817.0
+offset_bottom = 217.0
+theme_override_colors/font_color = Color(0, 0.658824, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_lyle1")
+theme_override_font_sizes/font_size = 70
+text = "Keep going!"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 269.0
+offset_top = 235.0
+offset_right = 901.0
+offset_bottom = 380.0
+theme_override_colors/font_disabled_color = Color(0.436312, 0.465602, 0.131884, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.408467, 0.446902, 0.132701, 1)
+theme_override_colors/font_hover_color = Color(0.437015, 0.448892, 0.129051, 1)
+theme_override_colors/icon_disabled_color = Color(0.398688, 0.43657, 0.092139, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.413049, 0.490453, 0.10549, 1)
+theme_override_colors/icon_hover_color = Color(0.358068, 0.432859, 0.128821, 1)
+theme_override_colors/icon_pressed_color = Color(0.371526, 0.446019, 0.071178, 1)
+theme_override_colors/icon_focus_color = Color(0.378733, 0.448593, 0.0899434, 1)
+theme_override_colors/icon_normal_color = Color(0.414087, 0.463546, 0.0950676, 1)
+theme_override_colors/font_outline_color = Color(0.400403, 0.446876, 0.0865962, 1)
+theme_override_colors/font_color = Color(0.380171, 0.436879, 0.113351, 1)
+theme_override_colors/font_focus_color = Color(0.35144, 0.404113, 0.109715, 1)
+theme_override_colors/font_pressed_color = Color(0.417438, 0.440278, 0.108859, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_c136b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ynkip")
+text = "Try again!!"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 269.0
+offset_top = 390.0
+offset_right = 901.0
+offset_bottom = 536.0
+theme_override_colors/font_disabled_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.984314, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_nfd0r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lyle1")
+text = "Go home"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

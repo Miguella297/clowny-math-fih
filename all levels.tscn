@@ -75,6 +75,7 @@ bg_color = Color(0.034335, 0.285581, 0.323874, 1)
 bg_color = Color(0.0978475, 0.369129, 0.379537, 1)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(2, 0)
 script = ExtResource("1_xtqa4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -217,10 +218,10 @@ theme_override_colors/font_color = Color(0, 0.968627, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0.941176, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0.94902, 0, 1)
 theme_override_fonts/font = ExtResource("7_7u02d")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_ou8rs")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jgh7m")
-text = "Math Level 3: Eyes Closed - Jisoo and Zayn"
+text = "Dandelions - Ruth B"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

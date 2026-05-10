@@ -1,0 +1,132 @@
+[gd_scene load_steps=18 format=3 uid="uid://dcpndv3bahmrm"]
+
+[ext_resource type="Texture2D" uid="uid://c66k75n4ul216" path="res://Math man.png" id="1_35pyt"]
+[ext_resource type="Script" uid="uid://dc1kboulpurhi" path="res://area_2d_3b.gd" id="2_ljq7y"]
+[ext_resource type="Texture2D" uid="uid://doh1i06tml7gj" path="res://mathmen 2.png" id="3_4f53f"]
+[ext_resource type="Script" uid="uid://diyksurls3j15" path="res://area_2d_4b.gd" id="4_mbnyb"]
+[ext_resource type="Script" uid="uid://ccoo22jukl2o0" path="res://area_2d_5b.gd" id="5_5ep0k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljq7y"]
+atlas = ExtResource("1_35pyt")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4f53f"]
+atlas = ExtResource("1_35pyt")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mbnyb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljq7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4f53f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_35pyt"]
+size = Vector2(20.6667, 49.5789)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbnyb"]
+atlas = ExtResource("3_4f53f")
+region = Rect2(0, 80, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ep0k"]
+atlas = ExtResource("3_4f53f")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3d6cu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbnyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ep0k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4f53f"]
+size = Vector2(22.8394, 59.0323)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3d6cu"]
+atlas = ExtResource("3_4f53f")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c68ix"]
+atlas = ExtResource("3_4f53f")
+region = Rect2(0, 80, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1aqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3d6cu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c68ix")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mbnyb"]
+radius = 25.5209
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(23, 8)
+scale = Vector2(1.40625, 1.1875)
+sprite_frames = SubResource("SpriteFrames_mbnyb")
+autoplay = "default"
+frame = 1
+frame_progress = 0.277911
+
+[node name="Area2D3B" type="Area2D" parent="AnimatedSprite2D"]
+script = ExtResource("2_ljq7y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D3B"]
+position = Vector2(-42.2889, -6.36842)
+shape = SubResource("RectangleShape2D_35pyt")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-846, 401)
+scale = Vector2(1.0125, 1.1625)
+sprite_frames = SubResource("SpriteFrames_3d6cu")
+autoplay = "default"
+frame = 1
+frame_progress = 0.61787
+
+[node name="Area2D4B" type="Area2D" parent="AnimatedSprite2D2"]
+script = ExtResource("4_mbnyb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D2/Area2D4B"]
+position = Vector2(-32.5926, -6.88172)
+shape = SubResource("RectangleShape2D_4f53f")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-1, 406)
+scale = Vector2(1.1, 1.08784)
+sprite_frames = SubResource("SpriteFrames_s1aqc")
+autoplay = "default"
+frame = 1
+frame_progress = 0.89959
+
+[node name="Area2D5B" type="Area2D" parent="AnimatedSprite2D3"]
+script = ExtResource("5_5ep0k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3/Area2D5B"]
+position = Vector2(-13.6364, -5.96046e-08)
+shape = SubResource("CircleShape2D_mbnyb")

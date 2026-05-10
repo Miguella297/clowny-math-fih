@@ -1,0 +1,196 @@
+[gd_scene load_steps=15 format=3 uid="uid://b08gp1bwbrnbe"]
+
+[ext_resource type="Script" uid="uid://cpjyi3qd478o5" path="res://math_question_3.3.gd" id="1_xc7ar"]
+[ext_resource type="Texture2D" uid="uid://bf00ro2srqpau" path="res://wave 2.png" id="2_bq4jf"]
+[ext_resource type="Texture2D" uid="uid://d4g182canx028" path="res://midnight lake.png" id="3_kwm0v"]
+[ext_resource type="Texture2D" uid="uid://pgmuth82mqvf" path="res://donut.png" id="4_dfoew"]
+[ext_resource type="FontFile" uid="uid://x0d43sopbku1" path="res://mangat.ttf" id="5_14vwn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5iohn"]
+texture = ExtResource("2_bq4jf")
+modulate_color = Color(0.77084, 0.770839, 0.770839, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oecdx"]
+texture = ExtResource("3_kwm0v")
+modulate_color = Color(0.392157, 0.411765, 0.654902, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kpupu"]
+texture = ExtResource("4_dfoew")
+modulate_color = Color(0.787759, 0.787759, 0.787759, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obnw3"]
+bg_color = Color(0.215686, 0.643137, 0.862745, 0)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.270588, 0.8, 0.8, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 69
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir1pa"]
+bg_color = Color(0.6, 0.6, 0.6, 0.47451)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.180392, 0.8, 0.8, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ej1rd"]
+bg_color = Color(0.702459, 0.592472, 0.145832, 1)
+draw_center = false
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.923239, 0.795818, 0.180957, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8iuaf"]
+bg_color = Color(0.6, 0.6, 0.6, 0.388235)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.8, 0.8, 0.188235, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4n6l1"]
+bg_color = Color(0.6, 0.176471, 0.6, 1)
+draw_center = false
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.105882, 0.8, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhpvt"]
+bg_color = Color(0.635519, 0.585064, 0.602266, 0.454902)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.0784314, 0.8, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_xc7ar")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 392.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5iohn")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 392.0
+offset_right = 773.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_oecdx")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 773.0
+offset_right = 1153.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_kpupu")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 306.0
+offset_top = 86.0
+offset_right = 851.0
+offset_bottom = 169.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("5_14vwn")
+theme_override_font_sizes/font_size = 60
+text = "What is 56 x 24??"
+
+[node name="ButtonA" type="Button" parent="."]
+offset_left = 370.0
+offset_top = 191.0
+offset_right = 790.0
+offset_bottom = 311.0
+theme_override_colors/font_disabled_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.94902, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.929412, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.956863, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.941176, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.929412, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.87451, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.901961, 0, 1)
+theme_override_colors/font_color = Color(0, 0.866667, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0.909804, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.890196, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_obnw3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ir1pa")
+text = "1422"
+
+[node name="ButtonB" type="Button" parent="."]
+offset_left = 373.0
+offset_top = 319.0
+offset_right = 792.0
+offset_bottom = 434.0
+theme_override_colors/font_disabled_color = Color(0, 0.776471, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.807843, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.760784, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.811765, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.772549, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.784314, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.796078, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.772549, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.796078, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.847059, 0, 1)
+theme_override_colors/font_color = Color(0, 0.835294, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0.835294, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.862745, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_ej1rd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8iuaf")
+text = "1286"
+
+[node name="ButtonC" type="Button" parent="."]
+offset_left = 378.0
+offset_top = 444.0
+offset_right = 789.0
+offset_bottom = 563.0
+theme_override_colors/font_disabled_color = Color(0, 0.847059, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.835294, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.839216, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.862745, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.835294, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.847059, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.854902, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.827451, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.819608, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.827451, 0, 1)
+theme_override_colors/font_color = Color(0, 0.882353, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0.835294, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.866667, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_4n6l1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mhpvt")
+text = "1344"
+
+[connection signal="pressed" from="ButtonA" to="." method="_on_button_a_pressed"]
+[connection signal="pressed" from="ButtonB" to="." method="_on_button_b_pressed"]
+[connection signal="pressed" from="ButtonC" to="." method="_on_button_c_pressed"]
