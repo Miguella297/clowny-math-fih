@@ -1,3 +1,172 @@
-[gd_scene format=3 uid="uid://c6ed02nhjioat"]
+[gd_scene load_steps=19 format=3 uid="uid://c6ed02nhjioat"]
+
+[ext_resource type="Script" uid="uid://2gdju5hx5i0k" path="res://deathscene_bonus_2.gd" id="1_jc8ln"]
+[ext_resource type="Texture2D" uid="uid://onsk55filor8" path="res://Hoppers3.png" id="1_mkfau"]
+[ext_resource type="Texture2D" uid="uid://8svoaxd7l2oi" path="res://English Poster (2).png" id="2_jc8ln"]
+[ext_resource type="Texture2D" uid="uid://x6rp6tiqu3g6" path="res://lake city.png" id="3_kxkg8"]
+[ext_resource type="Texture2D" uid="uid://dmt0m2yg12dut" path="res://Hoppers2.png" id="4_mqefu"]
+[ext_resource type="Texture2D" uid="uid://jjc28rl0mq6h" path="res://glass.png" id="5_pom35"]
+[ext_resource type="Texture2D" uid="uid://btihxueli7mbr" path="res://bech.png" id="6_0ex3l"]
+[ext_resource type="FontFile" uid="uid://2kovgfn6gmd4" path="res://Welcome Darling.otf" id="7_1ank1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1bvy1"]
+texture = ExtResource("1_mkfau")
+modulate_color = Color(0.952149, 0.516358, 0.513736, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_12tfy"]
+texture = ExtResource("2_jc8ln")
+modulate_color = Color(0.687215, 0.687215, 0.687215, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r5v0y"]
+texture = ExtResource("3_kxkg8")
+modulate_color = Color(0.712129, 0.712129, 0.712129, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vioig"]
+texture = ExtResource("4_mqefu")
+modulate_color = Color(0.60933, 0.60933, 0.60933, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1l0wj"]
+texture = ExtResource("5_pom35")
+modulate_color = Color(0.77084, 0.770839, 0.770839, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7pkyp"]
+texture = ExtResource("6_0ex3l")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mkfau"]
+bg_color = Color(0.972549, 0.392157, 0, 0.678431)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.598565, 0.905457, 0.183806, 1)
+corner_radius_top_left = 140
+corner_radius_top_right = 140
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_anu5c"]
+bg_color = Color(0.715265, 0.381706, 0.0848037, 0.490196)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.333333, 0.94902, 0.368627, 1)
+corner_radius_top_left = 140
+corner_radius_top_right = 140
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jc8ln"]
+bg_color = Color(0.960784, 0.470588, 0.321569, 0.498039)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.632168, 0.896902, 0.206937, 1)
+corner_radius_bottom_right = 140
+corner_radius_bottom_left = 140
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxkg8"]
+bg_color = Color(0.990633, 0.678415, 0.157208, 0.419608)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.607389, 0.901147, 0.27215, 1)
+corner_radius_bottom_right = 140
+corner_radius_bottom_left = 140
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_jc8ln")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 418.0
+offset_bottom = 327.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1bvy1")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 418.0
+offset_right = 756.0
+offset_bottom = 327.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_12tfy")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 756.0
+offset_right = 1152.0
+offset_bottom = 327.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_r5v0y")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_top = 327.0
+offset_right = 417.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_vioig")
+
+[node name="Panel5" type="Panel" parent="."]
+offset_left = 417.0
+offset_top = 327.0
+offset_right = 755.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1l0wj")
+
+[node name="Panel6" type="Panel" parent="."]
+offset_left = 755.0
+offset_top = 327.0
+offset_right = 1153.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_7pkyp")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 389.0
+offset_top = 41.0
+offset_right = 785.0
+offset_bottom = 151.0
+theme_override_colors/font_color = Color(0.441804, 0.936647, 0.129961, 1)
+theme_override_fonts/font = ExtResource("7_1ank1")
+theme_override_font_sizes/font_size = 100
+text = "Bro died"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 270.0
+offset_top = 144.0
+offset_right = 899.0
+offset_bottom = 349.0
+theme_override_colors/font_disabled_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0.984314, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.984314, 1)
+theme_override_colors/font_color = Color(4.90934e-06, 0, 0.891691, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/hover = SubResource("StyleBoxFlat_mkfau")
+theme_override_styles/normal = SubResource("StyleBoxFlat_anu5c")
+text = "Again?"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 272.0
+offset_top = 363.0
+offset_right = 899.0
+offset_bottom = 569.0
+theme_override_colors/font_disabled_color = Color(0.960784, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.968627, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.976471, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.972549, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.968627, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.968627, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0.984314, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.94902, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.984314, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.945098, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.960784, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_jc8ln")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kxkg8")
+text = "No cause Monkey"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

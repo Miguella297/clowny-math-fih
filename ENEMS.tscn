@@ -1,0 +1,265 @@
+[gd_scene load_steps=27 format=3 uid="uid://bc3obqvtrkm4"]
+
+[ext_resource type="Texture2D" uid="uid://lr4r0un26j64" path="res://laser.png" id="1_81qrb"]
+[ext_resource type="Script" uid="uid://chlyulsw47574" path="res://area_2db+10.gd" id="2_6aupv"]
+[ext_resource type="Texture2D" uid="uid://bdcyhgfquj14d" path="res://rename.png" id="3_2wi8v"]
+[ext_resource type="Script" uid="uid://cqn5hs5gcqueg" path="res://area_2db+11.gd" id="4_qsuvf"]
+[ext_resource type="Texture2D" uid="uid://c0c773sw1w1cu" path="res://doom flower.png" id="5_yja7g"]
+[ext_resource type="Script" uid="uid://d0mwcmgvtpc88" path="res://area_2db+12.gd" id="6_myjeq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6aupv"]
+atlas = ExtResource("1_81qrb")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wi8v"]
+atlas = ExtResource("1_81qrb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qsuvf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6aupv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wi8v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 14.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yja7g"]
+size = Vector2(13, 18)
+
+[sub_resource type="Animation" id="Animation_2wi8v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_81qrb"]
+resource_name = "cros"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 88), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6aupv"]
+_data = {
+&"RESET": SubResource("Animation_2wi8v"),
+&"cros": SubResource("Animation_81qrb")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsuvf"]
+atlas = ExtResource("3_2wi8v")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yja7g"]
+atlas = ExtResource("3_2wi8v")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_myjeq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsuvf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yja7g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2wi8v"]
+size = Vector2(25.3585, 24.2759)
+
+[sub_resource type="Animation" id="Animation_qsuvf"]
+resource_name = "skel"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(83, 81), Vector2(83, 0), Vector2(83, 81)]
+}
+
+[sub_resource type="Animation" id="Animation_yja7g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(83, 81)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yja7g"]
+_data = {
+&"RESET": SubResource("Animation_yja7g"),
+&"skel": SubResource("Animation_qsuvf")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myjeq"]
+atlas = ExtResource("5_yja7g")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sja5a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myjeq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yja7g"]
+radius = 14.9658
+
+[sub_resource type="Animation" id="Animation_myjeq"]
+resource_name = "spork"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(148, 0), Vector2(148, 81), Vector2(148, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sja5a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimatedSprite2D3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(148, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rv70j"]
+_data = {
+&"RESET": SubResource("Animation_sja5a"),
+&"spork": SubResource("Animation_myjeq")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_qsuvf")
+autoplay = "default"
+frame_progress = 0.735981
+
+[node name="Area2DB+10" type="Area2D" parent="AnimatedSprite2D"]
+script = ExtResource("2_6aupv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2DB+10"]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_yja7g")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, 88)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D/Area2DB+10/CollisionShape2D")
+libraries = {
+&"": SubResource("AnimationLibrary_6aupv")
+}
+autoplay = "cros"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(83, 81)
+scale = Vector2(0.828125, 0.453125)
+sprite_frames = SubResource("SpriteFrames_myjeq")
+autoplay = "default"
+frame = 1
+frame_progress = 0.562502
+
+[node name="Area2DB+11" type="Area2D" parent="AnimatedSprite2D2"]
+script = ExtResource("4_qsuvf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D2/Area2DB+11"]
+position = Vector2(-0.603783, 1.10345)
+shape = SubResource("RectangleShape2D_2wi8v")
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(81, 0)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Marker2D2")
+libraries = {
+&"": SubResource("AnimationLibrary_yja7g")
+}
+autoplay = "skel"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(148, 0)
+scale = Vector2(1.25391, 0.472656)
+sprite_frames = SubResource("SpriteFrames_sja5a")
+
+[node name="Area2DB+12" type="Area2D" parent="AnimatedSprite2D3"]
+script = ExtResource("6_myjeq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3/Area2DB+12"]
+position = Vector2(1.59502, 0)
+shape = SubResource("CircleShape2D_yja7g")
+
+[node name="Marker2D3" type="Marker2D" parent="."]
+position = Vector2(150, 80)
+scale = Vector2(0.828125, 0.453125)
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Marker2D3")
+libraries = {
+&"": SubResource("AnimationLibrary_rv70j")
+}
+autoplay = "spork"

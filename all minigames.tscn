@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c0m6632gqidqm"]
+[gd_scene load_steps=22 format=3 uid="uid://c0m6632gqidqm"]
 
 [ext_resource type="Texture2D" uid="uid://0akrn6wt82h1" path="res://set.png" id="1_q51jr"]
 [ext_resource type="Script" uid="uid://d35xqoi7g46l7" path="res://all_minigames.gd" id="1_vmbwb"]
@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://cgp2fhn6mmif" path="res://Bloom Gum PERSONAL USE ONLY!.ttf" id="5_nvobj"]
 [ext_resource type="FontFile" uid="uid://dyktuwt0dpy1j" path="res://Super Popstar.ttf" id="6_qwnig"]
 [ext_resource type="FontFile" uid="uid://cb0jae84ypbv3" path="res://Deartone.ttf" id="8_xvpg4"]
+[ext_resource type="FontFile" uid="uid://b8ud8pwm118c5" path="res://Super Starfish.ttf" id="9_nvobj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hg08o"]
 texture = ExtResource("1_q51jr")
@@ -74,6 +75,30 @@ corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8hj1"]
+bg_color = Color(0, 0.270588, 0.317647, 0.231373)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.12549, 0.8, 0.8, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uj3hs"]
+bg_color = Color(8.66354e-07, 0.379971, 0.379971, 0.431373)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.0784314, 0.8, 0.8, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_vmbwb")
@@ -186,6 +211,32 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_jm4kc")
 theme_override_styles/normal = SubResource("StyleBoxFlat_kt6ri")
 text = "Minigame 2: Hop it!!"
 
+[node name="Button3" type="Button" parent="."]
+offset_left = 48.0
+offset_top = 316.0
+offset_right = 607.0
+offset_bottom = 417.0
+scale = Vector2(0.925352, 0.992065)
+theme_override_colors/font_disabled_color = Color(0, 0.921569, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.894118, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.901961, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.87451, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.929412, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.882353, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.882353, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.941176, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.87451, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.921569, 0, 1)
+theme_override_colors/font_color = Color(0, 0.956863, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0.956863, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.941176, 0, 1)
+theme_override_fonts/font = ExtResource("9_nvobj")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_i8hj1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uj3hs")
+text = "Minigame 3: Cannon events"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button31" to="." method="_on_button_31_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

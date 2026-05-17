@@ -396,6 +396,7 @@ scale = Vector2(0.421875, -0.1875)
 sprite_frames = SubResource("SpriteFrames_fwi7g")
 
 [node name="Area2D3+1" type="Area2D" parent="AnimatedSprite2D4"]
+script = ExtResource("5_c3yap")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D4/Area2D3+1"]
 shape = SubResource("CircleShape2D_gm54x")
@@ -419,14 +420,15 @@ autoplay = "default"
 frame = 2
 frame_progress = 0.809108
 
-[node name="Area2D3+!" type="Area2D" parent="AnimatedSprite2D6"]
+[node name="Area2D3+1" type="Area2D" parent="AnimatedSprite2D6"]
+script = ExtResource("5_c3yap")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D6/Area2D3+!"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D6/Area2D3+1"]
 position = Vector2(-2.28571, 0)
 shape = SubResource("CircleShape2D_f6rse")
 
 [node name="AnimationPlayer5" type="AnimationPlayer" parent="."]
-root_node = NodePath("../AnimatedSprite2D6/Area2D3+!/CollisionShape2D")
+root_node = NodePath("../AnimatedSprite2D6/Area2D3+1/CollisionShape2D")
 libraries = {
 &"": SubResource("AnimationLibrary_f6rse")
 }
