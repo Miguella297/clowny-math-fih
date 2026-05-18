@@ -3,12 +3,12 @@ extends Area2D
 @export var target_scene_path: String = "res://deathscene bonus 3.tscn"
 
 func _ready():
-	# Connect the signla (if not already connected in the editor)
+	# Connect the signal (if not already connected in the editor)
 	connect("body_entered", _on_body_entered)
-	
-func _on_body_entered(body):
-#Check if the body is in your player (assuming its a Kinematicbody2D or a Characterbody2D)
 
+func _on_body_entered(body):
+	# Check if the body is in your player (Assuming its a Kinematicbody2D or a Characterbody2D)
+	
 	if body.is_in_group("Player"):
 		call_deferred("_fix")
 

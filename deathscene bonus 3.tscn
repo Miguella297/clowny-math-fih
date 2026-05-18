@@ -1,3 +1,179 @@
-[gd_scene format=3 uid="uid://cyg5omdbdt2hw"]
+[gd_scene load_steps=18 format=3 uid="uid://cyg5omdbdt2hw"]
+
+[ext_resource type="Texture2D" uid="uid://c1rticwhbfrkd" path="res://fihs.png" id="1_7kum1"]
+[ext_resource type="Script" uid="uid://dsff0p77ypnjm" path="res://deathscene_bonus_3.gd" id="1_mbn7l"]
+[ext_resource type="Texture2D" uid="uid://pxlnx8h3p4r6" path="res://fish celebrate.png" id="1_s8atb"]
+[ext_resource type="Texture2D" uid="uid://id3agutskrrr" path="res://fatass fish.png" id="3_r3gcw"]
+[ext_resource type="Texture2D" uid="uid://cpcrp5ed0hhl2" path="res://fishies.png" id="4_jowo2"]
+[ext_resource type="Texture2D" uid="uid://cjlokp3nlgo3" path="res://fishy2.png" id="5_mbn7l"]
+[ext_resource type="FontFile" uid="uid://cgp2fhn6mmif" path="res://Bloom Gum PERSONAL USE ONLY!.ttf" id="6_jowo2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2r8vq"]
+texture = ExtResource("1_7kum1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7kum1"]
+texture = ExtResource("1_s8atb")
+modulate_color = Color(0.835294, 0.698039, 0.698039, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xtglc"]
+texture = ExtResource("3_r3gcw")
+modulate_color = Color(0.646029, 0.646029, 0.646029, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xw50k"]
+texture = ExtResource("4_jowo2")
+modulate_color = Color(0.775063, 0.775063, 0.775063, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_isjbe"]
+texture = ExtResource("5_mbn7l")
+modulate_color = Color(0.572988, 0.572988, 0.572988, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a8hq6"]
+texture = ExtResource("1_7kum1")
+modulate_color = Color(0.695503, 0.695503, 0.695503, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mbn7l"]
+bg_color = Color(0.6, 0.6, 0.6, 0.282353)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.180392, 0.8, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtglc"]
+bg_color = Color(0.6, 0.6, 0.6, 0.517647)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.34902, 0.8, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xw50k"]
+bg_color = Color(0.831373, 0.517647, 0.129412, 0.270588)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.282353, 0.8, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_isjbe"]
+bg_color = Color(0.72549, 0.580392, 0.188235, 0.501961)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.313726, 0.8, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_mbn7l")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 391.0
+offset_bottom = 338.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2r8vq")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 391.0
+offset_right = 775.0
+offset_bottom = 338.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_7kum1")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 775.0
+offset_right = 1149.0
+offset_bottom = 338.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xtglc")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_top = 338.0
+offset_right = 392.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xw50k")
+
+[node name="Panel5" type="Panel" parent="."]
+offset_left = 392.0
+offset_top = 338.0
+offset_right = 774.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_isjbe")
+
+[node name="Panel6" type="Panel" parent="."]
+offset_left = 774.0
+offset_top = 338.0
+offset_right = 1149.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_a8hq6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 367.0
+offset_top = 48.0
+offset_right = 817.0
+offset_bottom = 158.0
+theme_override_colors/font_color = Color(0, 0.952941, 0, 1)
+theme_override_fonts/font = ExtResource("6_jowo2")
+theme_override_font_sizes/font_size = 90
+text = "Dead sonion"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 306.0
+offset_top = 154.0
+offset_right = 858.0
+offset_bottom = 311.0
+theme_override_colors/font_disabled_color = Color(0.796078, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.811765, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.796078, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.811765, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.796078, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.827451, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0.819608, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.8, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.819608, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.839216, 0, 0, 1)
+theme_override_colors/font_color = Color(0.866667, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.862745, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.972549, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_mbn7l")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xtglc")
+text = "Try again"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 311.0
+offset_top = 329.0
+offset_right = 855.0
+offset_bottom = 486.0
+theme_override_colors/font_disabled_color = Color(0.929412, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.894118, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.878431, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0.909804, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.866667, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.827451, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0.882353, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.890196, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.882353, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.87451, 0, 0, 1)
+theme_override_colors/font_color = Color(0.854902, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.878431, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.917647, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_xw50k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_isjbe")
+text = "Main menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

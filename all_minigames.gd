@@ -13,3 +13,7 @@ func _on_button_31_pressed() -> void:
 
 func _on_button_3_pressed() -> void:
 	get_tree().change_scene_to_file("Minigame3.tscn")
+
+
+func _on_button_4_pressed() -> void:
+	get_tree().change_scene_to_file("Double asteroids.tscn")
