@@ -1,0 +1,159 @@
+[gd_scene load_steps=15 format=3 uid="uid://r1rl7dbotgqt"]
+
+[ext_resource type="Texture2D" uid="uid://v0c5ahabkxwi" path="res://stalectite observer.png" id="1_8ytq3"]
+[ext_resource type="Script" uid="uid://cdisniajlo40e" path="res://deathscene_bonus_4.gd" id="1_shio6"]
+[ext_resource type="Texture2D" uid="uid://0ey7yeo5g646" path="res://ice cubes.png" id="2_shio6"]
+[ext_resource type="Texture2D" uid="uid://cyie1pmifwnvw" path="res://twilight trees.png" id="3_33cjg"]
+[ext_resource type="Texture2D" uid="uid://b5v0kn7qtnewx" path="res://franky.png" id="4_h7hhg"]
+[ext_resource type="FontFile" uid="uid://bmbr7rh7npd11" path="res://Malam Poek.ttf" id="5_psqmd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p0y1r"]
+texture = ExtResource("1_8ytq3")
+modulate_color = Color(0.783523, 0.783523, 0.783523, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nyngi"]
+texture = ExtResource("2_shio6")
+modulate_color = Color(0.808998, 0.808998, 0.808998, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xm8a6"]
+texture = ExtResource("3_33cjg")
+modulate_color = Color(0.808998, 0.808998, 0.808998, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jxwx3"]
+texture = ExtResource("4_h7hhg")
+modulate_color = Color(0.720467, 0.720468, 0.720467, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33cjg"]
+bg_color = Color(0.619608, 0.745098, 0, 0.172549)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.239216, 0.8, 1)
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7hhg"]
+bg_color = Color(0.962357, 0.57728, 3.85046e-07, 0.243137)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.164706, 0.8, 1)
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_shio6"]
+bg_color = Color(0.6, 0.254902, 0.6, 0.294118)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.180392, 0.8, 1)
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_psqmd"]
+bg_color = Color(0.588235, 0.647059, 0.6, 0.376471)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.176471, 0.8, 1)
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_shio6")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 558.0
+offset_bottom = 328.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_p0y1r")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 558.0
+offset_right = 1151.0
+offset_bottom = 328.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_nyngi")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_top = 328.0
+offset_right = 558.0
+offset_bottom = 647.0
+rotation = 0.000507866
+theme_override_styles/panel = SubResource("StyleBoxTexture_xm8a6")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 558.0
+offset_top = 328.0
+offset_right = 1154.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_jxwx3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 177.0
+offset_top = 61.0
+offset_right = 941.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(0, 0.958055, 0.867679, 1)
+theme_override_fonts/font = ExtResource("5_psqmd")
+theme_override_font_sizes/font_size = 60
+text = "404 DEATH NOT FOUND"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 225.0
+offset_top = 164.0
+offset_right = 891.0
+offset_bottom = 303.0
+theme_override_colors/font_disabled_color = Color(0, 0.854902, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.854902, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.839216, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.854902, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.823529, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.807843, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.807843, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.811765, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.807843, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.835294, 0, 1)
+theme_override_colors/font_color = Color(0, 0.819608, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0.819608, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.827451, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_33cjg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h7hhg")
+text = "AGAIN AGAIN"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 225.0
+offset_top = 320.0
+offset_right = 892.0
+offset_bottom = 468.0
+theme_override_colors/font_disabled_color = Color(0, 0.85098, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.811765, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.843137, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0.784314, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0.847059, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.827451, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0.839216, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0.866667, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.835294, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.882353, 0, 1)
+theme_override_colors/font_color = Color(0, 0.862745, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0.894118, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.882353, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_shio6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_psqmd")
+text = "Nah main menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
