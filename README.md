@@ -7,3 +7,5 @@ There are as well instructions which can be located on the main screen of the ga
 
 If at any point the player gets bored with the main levels, there is a mini game (non math related), to keep entertained!
  (Claude was used for the process of debuging)
+
+![screenshot](https://cdn.hackclub.com/019e61b0-bd45-7ab8-9dbe-db2524dc4b84/Screenshot%202026-05-25%20202546.png) 
