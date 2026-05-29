@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var target_scene_path: String = "res://level done!.tscn.tscn"
+@export var target_scene_path: String = "res://level done!.tscn"
 
 func _ready():
 	# Connect thw signal (if not already connected in the editor)
