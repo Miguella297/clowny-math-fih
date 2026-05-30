@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://bdw00a65mnrca"]
+[gd_scene load_steps=58 format=3 uid="uid://bdw00a65mnrca"]
 
 [ext_resource type="Texture2D" uid="uid://bdcyhgfquj14d" path="res://rename.png" id="1_45pq5"]
 [ext_resource type="Script" uid="uid://c1swo7hfqpon1" path="res://area_2d_4.gd" id="2_g51g3"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cig0dheo80rfo" path="res://googly eyes.png" id="7_5o1f5"]
 [ext_resource type="Script" uid="uid://2jpxra3n6quf" path="res://area_2d_8.gd" id="8_mi564"]
 [ext_resource type="Script" uid="uid://b3k43pp5otyx3" path="res://area_2d_9.gd" id="9_tnyew"]
+[ext_resource type="Texture2D" uid="uid://bwbbjnkxgybie" path="res://New Piskel (14).png" id="10_u1fve"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g51g3"]
 atlas = ExtResource("1_45pq5")
@@ -388,6 +389,59 @@ _data = {
 &"blueby": SubResource("Animation_ya3f7")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3e72"]
+atlas = ExtResource("10_u1fve")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s5rup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3e72")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_knpd4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-61, -348)]
+}
+
+[sub_resource type="Animation" id="Animation_s5rup"]
+resource_name = "spik"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-61, -348), Vector2(122, -348), Vector2(-61, -348)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_icyhl"]
+_data = {
+&"RESET": SubResource("Animation_knpd4"),
+&"spik": SubResource("Animation_s5rup")
+}
+
 [node name="Node2D" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -537,3 +591,18 @@ autoplay = "blueby"
 
 [node name="Marker2D5" type="Marker2D" parent="."]
 position = Vector2(156, -564)
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-61, -348)
+sprite_frames = SubResource("SpriteFrames_s5rup")
+
+[node name="AnimationPlayer7" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D7")
+libraries = {
+&"": SubResource("AnimationLibrary_icyhl")
+}
+autoplay = "spik"
+
+[node name="Marker2D6" type="Marker2D" parent="."]
+position = Vector2(122, -355)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://dm0omk1chxwj0"]
+[gd_scene load_steps=78 format=3 uid="uid://dm0omk1chxwj0"]
 
 [ext_resource type="Texture2D" uid="uid://bwbbjnkxgybie" path="res://New Piskel (14).png" id="1_jkwnb"]
 [ext_resource type="Script" uid="uid://rfgd27e0nwdq" path="res://area_2d_4b+1.gd" id="2_jkwnb"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c0c773sw1w1cu" path="res://doom flower.png" id="12_5rfj3"]
 [ext_resource type="Script" uid="uid://dbt4iximl0igs" path="res://area_2d_4b+7.gd" id="13_10ceg"]
 [ext_resource type="Script" uid="uid://20vwn8l7g1ps" path="res://area_2d_4b+8.gd" id="14_qqsxe"]
+[ext_resource type="Script" uid="uid://dwvgkpjuwqirx" path="res://area_2d_4b+9.gd" id="15_disji"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_07snf"]
 atlas = ExtResource("1_jkwnb")
@@ -518,11 +519,20 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 9.0
 }]
 
-[sub_resource type="Animation" id="Animation_kpanj"]
-resource_name = "new_animation"
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqsxe"]
+size = Vector2(3.42859, 20.5714)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_disji"]
+size = Vector2(17.1429, 3.4285)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oau5y"]
+size = Vector2(12.5715, 5.71423)
+
+[sub_resource type="Animation" id="Animation_7a17h"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -530,14 +540,32 @@ tracks/0/path = NodePath("../..:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": []
+"values": [Vector2(375, -295)]
+}
+
+[sub_resource type="Animation" id="Animation_kpanj"]
+resource_name = "new_animation"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.03333, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(375, -295), Vector2(375, -104), Vector2(375, -295)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7a17h"]
 _data = {
+&"RESET": SubResource("Animation_7a17h"),
 &"new_animation": SubResource("Animation_kpanj")
 }
 
@@ -719,16 +747,32 @@ libraries = {
 autoplay = "RESET"
 
 [node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="."]
-position = Vector2(430, -295)
+texture_filter = 1
+position = Vector2(375, -295)
 scale = Vector2(0.875, 0.875)
 sprite_frames = SubResource("SpriteFrames_1kbrj")
+autoplay = "default"
+frame_progress = 0.496041
 
 [node name="Area2D4B+9" type="Area2D" parent="AnimatedSprite2D9"]
+script = ExtResource("15_disji")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D9/Area2D4B+9"]
+position = Vector2(-1.30534e-05, -1.14284)
+shape = SubResource("RectangleShape2D_qqsxe")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AnimatedSprite2D9/Area2D4B+9"]
+position = Vector2(-0.571442, -1.71432)
+shape = SubResource("RectangleShape2D_disji")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="AnimatedSprite2D9/Area2D4B+9"]
+position = Vector2(-0.571442, -1.71432)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_oau5y")
 
 [node name="AnimationPlayer9" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite2D9/Area2D4B+9/CollisionShape2D")
 libraries = {
 &"": SubResource("AnimationLibrary_7a17h")
 }
+autoplay = "new_animation"
