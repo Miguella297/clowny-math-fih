@@ -319,7 +319,7 @@ _data = {
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-1, 0.749999)
-scale = Vector2(0.203125, 0.261719)
+scale = Vector2(0.203125, 0.123047)
 sprite_frames = SubResource("SpriteFrames_gxa7v")
 autoplay = "default"
 frame_progress = 0.245668
@@ -392,7 +392,7 @@ position = Vector2(121, 40)
 [node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-46, 36)
-scale = Vector2(0.421875, -0.1875)
+scale = Vector2(0.421875, -0.125)
 sprite_frames = SubResource("SpriteFrames_fwi7g")
 
 [node name="Area2D3+1" type="Area2D" parent="AnimatedSprite2D4"]

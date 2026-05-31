@@ -484,7 +484,6 @@ script = ExtResource("6_3yqyl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D4/Area2D2+7"]
 position = Vector2(-0.483365, -2.00677)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_epg4t")
 
 [node name="AnimationPlayer4" type="AnimationPlayer" parent="."]

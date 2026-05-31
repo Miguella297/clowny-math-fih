@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c0m6632gqidqm"]
+[gd_scene load_steps=28 format=3 uid="uid://c0m6632gqidqm"]
 
 [ext_resource type="Texture2D" uid="uid://0akrn6wt82h1" path="res://set.png" id="1_q51jr"]
 [ext_resource type="Script" uid="uid://d35xqoi7g46l7" path="res://all_minigames.gd" id="1_vmbwb"]
@@ -10,6 +10,7 @@
 [ext_resource type="FontFile" uid="uid://cb0jae84ypbv3" path="res://Deartone.ttf" id="8_xvpg4"]
 [ext_resource type="FontFile" uid="uid://b8ud8pwm118c5" path="res://Super Starfish.ttf" id="9_nvobj"]
 [ext_resource type="FontFile" uid="uid://colqo2dt5gbf0" path="res://Bubblegum.ttf" id="10_hg08o"]
+[ext_resource type="FontFile" uid="uid://8alw31hsxcrs" path="res://Eternalo.ttf" id="11_jm4kc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hg08o"]
 texture = ExtResource("1_q51jr")
@@ -120,6 +121,30 @@ border_width_top = 8
 border_width_right = 8
 border_width_bottom = 8
 border_color = Color(0.160784, 0.8, 0.8, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kkb0y"]
+bg_color = Color(0.258824, 0.6, 0.6, 0.376471)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.152941, 0.8, 0.8, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uvtli"]
+bg_color = Color(0.320811, 0.617873, 0.915542, 0.552941)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0.8, 0.8, 1)
 corner_radius_top_left = 60
 corner_radius_top_right = 60
 corner_radius_bottom_right = 60
@@ -286,8 +311,34 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_l8u8l")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vmr6y")
 text = "Minigame 4: Double asteroids"
 
+[node name="Button5" type="Button" parent="."]
+offset_left = 54.0
+offset_top = 529.0
+offset_right = 577.0
+offset_bottom = 633.0
+scale = Vector2(0.905898, 1.01227)
+theme_override_colors/font_disabled_color = Color(0.603056, 0.280321, 0.05266, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.65427, 0.279262, 0.0885608, 1)
+theme_override_colors/font_hover_color = Color(0.602474, 0.279853, 0.0821616, 1)
+theme_override_colors/icon_disabled_color = Color(0.604772, 0.287515, 0.031893, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.556017, 0.298016, 0.0581329, 1)
+theme_override_colors/icon_hover_color = Color(0.597145, 0.301521, 0.0680596, 1)
+theme_override_colors/icon_pressed_color = Color(0.545545, 0.259952, 0.0727187, 1)
+theme_override_colors/icon_focus_color = Color(0.601466, 0.273596, 0.0472983, 1)
+theme_override_colors/icon_normal_color = Color(0.48912, 0.233258, 0.0357168, 1)
+theme_override_colors/font_outline_color = Color(0.543667, 0.23918, 0, 1)
+theme_override_colors/font_color = Color(0.53014, 0.242848, 0, 1)
+theme_override_colors/font_focus_color = Color(0.5682, 0.280644, 0.0303497, 1)
+theme_override_colors/font_pressed_color = Color(0.603399, 0.296151, 0.0618023, 1)
+theme_override_fonts/font = ExtResource("11_jm4kc")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_kkb0y")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uvtli")
+text = "Minigame 5: Jumper Lopper"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button31" to="." method="_on_button_31_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]

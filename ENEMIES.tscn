@@ -1,11 +1,10 @@
-[gd_scene load_steps=78 format=3 uid="uid://dm0omk1chxwj0"]
+[gd_scene load_steps=77 format=3 uid="uid://dm0omk1chxwj0"]
 
 [ext_resource type="Texture2D" uid="uid://bwbbjnkxgybie" path="res://New Piskel (14).png" id="1_jkwnb"]
 [ext_resource type="Script" uid="uid://rfgd27e0nwdq" path="res://area_2d_4b+1.gd" id="2_jkwnb"]
 [ext_resource type="Texture2D" uid="uid://bdcyhgfquj14d" path="res://rename.png" id="3_cfnth"]
 [ext_resource type="Script" uid="uid://cxvtrjnjg4pck" path="res://area_2d_4b+2.gd" id="4_07snf"]
 [ext_resource type="Texture2D" uid="uid://cig0dheo80rfo" path="res://googly eyes.png" id="5_j4ioq"]
-[ext_resource type="Script" uid="uid://bstkea5djxr2t" path="res://area_2d_4b+3.gd" id="6_dt48h"]
 [ext_resource type="Texture2D" uid="uid://lr4r0un26j64" path="res://laser.png" id="7_0633w"]
 [ext_resource type="Script" uid="uid://vlju8parhoq2" path="res://area_2d_4b+4.gd" id="8_ortx5"]
 [ext_resource type="Texture2D" uid="uid://bgstsecj1rbw1" path="res://blue spike.png" id="9_s8xkc"]
@@ -625,10 +624,10 @@ autoplay = "default"
 frame = 2
 frame_progress = 0.978992
 
-[node name="Area2D4B+3" type="Area2D" parent="AnimatedSprite2D3"]
-script = ExtResource("6_dt48h")
+[node name="Area2D4B+2" type="Area2D" parent="AnimatedSprite2D3"]
+script = ExtResource("4_07snf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3/Area2D4B+3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D3/Area2D4B+2"]
 position = Vector2(-0.864865, -0.888889)
 shape = SubResource("CircleShape2D_j4ioq")
 
