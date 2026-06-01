@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cyg5omdbdt2hw"]
+[gd_scene load_steps=19 format=3 uid="uid://cyg5omdbdt2hw"]
 
 [ext_resource type="Texture2D" uid="uid://c1rticwhbfrkd" path="res://fihs.png" id="1_7kum1"]
 [ext_resource type="Script" uid="uid://dsff0p77ypnjm" path="res://deathscene_bonus_3.gd" id="1_mbn7l"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cpcrp5ed0hhl2" path="res://fishies.png" id="4_jowo2"]
 [ext_resource type="Texture2D" uid="uid://cjlokp3nlgo3" path="res://fishy2.png" id="5_mbn7l"]
 [ext_resource type="FontFile" uid="uid://cgp2fhn6mmif" path="res://Bloom Gum PERSONAL USE ONLY!.ttf" id="6_jowo2"]
+[ext_resource type="AudioStream" uid="uid://bwq3h54agf54k" path="res://death sound 2.mp3" id="8_xtglc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2r8vq"]
 texture = ExtResource("1_7kum1")
@@ -174,6 +175,12 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_xw50k")
 theme_override_styles/normal = SubResource("StyleBoxFlat_isjbe")
 text = "Main menu"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2394, 768.5)
+stream = ExtResource("8_xtglc")
+volume_db = 24.0
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

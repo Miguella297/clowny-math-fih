@@ -1,0 +1,125 @@
+[gd_scene load_steps=10 format=3 uid="uid://cwsikpc0c18cj"]
+
+[ext_resource type="Texture2D" uid="uid://bp57yurkr826m" path="res://bluck.png" id="1_rxp2q"]
+[ext_resource type="Script" uid="uid://42lt11d8x60a" path="res://area_2d_5b+12.gd" id="2_1xhqb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xhqb"]
+atlas = ExtResource("1_rxp2q")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1g0gn"]
+atlas = ExtResource("1_rxp2q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h6yaf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xhqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g0gn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7kt5i"]
+radius = 13.3598
+
+[sub_resource type="Animation" id="Animation_rxp2q"]
+resource_name = "freaky spike"
+length = 11.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.03333, 3.03333, 3.16667, 3.5, 6.1, 6.2, 6.33333, 7.03333, 7.43333, 8.66667, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(3.38813e-21, -5), Vector2(0, 152), Vector2(-820, 158), Vector2(-820, 190), Vector2(-918, 403), Vector2(-112, 402), Vector2(-99, 421), Vector2(-76, 421), Vector2(-13, 505), Vector2(40, 505), Vector2(22, 643), Vector2(-859, 650)]
+}
+
+[sub_resource type="Animation" id="Animation_1xhqb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.38813e-21, -5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1g0gn"]
+_data = {
+&"RESET": SubResource("Animation_1xhqb"),
+&"freaky spike": SubResource("Animation_rxp2q")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(3.38813e-21, -5)
+scale = Vector2(1.28125, 1.28125)
+sprite_frames = SubResource("SpriteFrames_h6yaf")
+autoplay = "default"
+frame_progress = 0.017746
+
+[node name="Area2D5B+12" type="Area2D" parent="AnimatedSprite2D"]
+script = ExtResource("2_1xhqb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D5B+12"]
+position = Vector2(-0.780488, 0.780487)
+shape = SubResource("CircleShape2D_7kt5i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D/Area2D5B+12/CollisionShape2D")
+libraries = {
+&"": SubResource("AnimationLibrary_1g0gn")
+}
+autoplay = "freaky spike"
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, 152)
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(-820, 158)
+
+[node name="Marker2D3" type="Marker2D" parent="."]
+position = Vector2(-820, 190)
+
+[node name="Marker2D4" type="Marker2D" parent="."]
+position = Vector2(-918, 403)
+
+[node name="Marker2D5" type="Marker2D" parent="."]
+position = Vector2(-112, 402)
+
+[node name="Marker2D6" type="Marker2D" parent="."]
+position = Vector2(-99, 421)
+
+[node name="Marker2D7" type="Marker2D" parent="."]
+position = Vector2(-76, 421)
+
+[node name="Marker2D8" type="Marker2D" parent="."]
+position = Vector2(-13, 505)
+scale = Vector2(1, -2.22076)
+
+[node name="Marker2D9" type="Marker2D" parent="."]
+position = Vector2(40, 505)
+
+[node name="Marker2D10" type="Marker2D" parent="."]
+position = Vector2(22, 643)
+
+[node name="Marker2D11" type="Marker2D" parent="."]
+position = Vector2(-859, 650)

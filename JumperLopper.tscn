@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://chbqk2cxk41pj"]
+[gd_scene load_steps=81 format=3 uid="uid://chbqk2cxk41pj"]
 
 [ext_resource type="Texture2D" uid="uid://b8tc5k67ieha8" path="res://coco dog.png" id="1_b10w7"]
 [ext_resource type="Texture2D" uid="uid://cf5pk8alw2qh7" path="res://doggo aura.png" id="2_bdoa8"]
@@ -23,6 +23,10 @@
 [ext_resource type="Script" uid="uid://cionsyd5iehyy" path="res://area_2d_5b+9.gd" id="21_0itba"]
 [ext_resource type="Script" uid="uid://35ji3ejxtb7s" path="res://area_2d_5b+10.gd" id="22_ts0i0"]
 [ext_resource type="Script" uid="uid://dnlnl2ulrkpwd" path="res://area_2d_5b+11.gd" id="23_ux00w"]
+[ext_resource type="PackedScene" uid="uid://cwsikpc0c18cj" path="res://spikechuds.tscn" id="24_ghi84"]
+[ext_resource type="PackedScene" uid="uid://c4paiwbjkpo7u" path="res://Spikechud2.tscn" id="25_50j7t"]
+[ext_resource type="Script" uid="uid://c16atve3ivnis" path="res://area_2db+14.gd" id="26_nfsu0"]
+[ext_resource type="AudioStream" uid="uid://bc5yk74l3x2ri" path="res://level 5 bonus.mp3" id="27_jvogg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8aue"]
 texture = ExtResource("1_b10w7")
@@ -476,6 +480,9 @@ size = Vector2(93, 6)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gijr7"]
 size = Vector2(46, 8)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qqts"]
+size = Vector2(91.5, 93.5)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Panel" type="Panel" parent="."]
@@ -566,6 +573,7 @@ theme_override_colors/font_color = Color(0.968627, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_ujjto")
 theme_override_font_sizes/font_size = 60
 text = "You"
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMap2" type="TileMap" parent="."]
 texture_filter = 1
@@ -773,3 +781,23 @@ shape = SubResource("RectangleShape2D_bcnh3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5B+11"]
 position = Vector2(519, -308)
 shape = SubResource("RectangleShape2D_gijr7")
+
+[node name="Node2D" parent="." instance=ExtResource("24_ghi84")]
+position = Vector2(998, -50)
+
+[node name="Node2D2" parent="." instance=ExtResource("25_50j7t")]
+position = Vector2(989, -55)
+
+[node name="Area2DB+14" type="Area2D" parent="."]
+position = Vector2(989, -55)
+script = ExtResource("26_nfsu0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DB+14"]
+position = Vector2(114.75, 112.25)
+shape = SubResource("RectangleShape2D_3qqts")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2394, 768.5)
+stream = ExtResource("27_jvogg")
+volume_db = 24.0
+autoplay = true

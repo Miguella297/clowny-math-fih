@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c6ed02nhjioat"]
+[gd_scene load_steps=20 format=3 uid="uid://c6ed02nhjioat"]
 
 [ext_resource type="Script" uid="uid://2gdju5hx5i0k" path="res://deathscene_bonus_2.gd" id="1_jc8ln"]
 [ext_resource type="Texture2D" uid="uid://onsk55filor8" path="res://Hoppers3.png" id="1_mkfau"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://jjc28rl0mq6h" path="res://glass.png" id="5_pom35"]
 [ext_resource type="Texture2D" uid="uid://btihxueli7mbr" path="res://bech.png" id="6_0ex3l"]
 [ext_resource type="FontFile" uid="uid://2kovgfn6gmd4" path="res://Welcome Darling.otf" id="7_1ank1"]
+[ext_resource type="AudioStream" uid="uid://bwq3h54agf54k" path="res://death sound 2.mp3" id="9_kxkg8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1bvy1"]
 texture = ExtResource("1_mkfau")
@@ -167,6 +168,12 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_jc8ln")
 theme_override_styles/normal = SubResource("StyleBoxFlat_kxkg8")
 text = "No cause Monkey"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2394, 768.5)
+stream = ExtResource("9_kxkg8")
+volume_db = 24.0
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

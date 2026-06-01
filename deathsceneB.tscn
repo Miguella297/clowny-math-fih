@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://c2gptt1fieira"]
+[gd_scene load_steps=13 format=3 uid="uid://c2gptt1fieira"]
 
 [ext_resource type="Script" uid="uid://cqtf2tfovknwq" path="res://deathscene_b.gd" id="1_qya7g"]
 [ext_resource type="AudioStream" uid="uid://blpex3e8cfnu0" path="res://DeathsceneB.mp3" id="1_t3dh0"]
 [ext_resource type="Texture2D" uid="uid://b4rpceq2e1ct5" path="res://Night lake.png" id="2_v7ae8"]
 [ext_resource type="Texture2D" uid="uid://cqqgwy0onw2xf" path="res://rocky shore.png" id="3_qya7g"]
 [ext_resource type="FontFile" uid="uid://clk6gu1ghtl6h" path="res://Melt-Swashes.ttf" id="4_5lp1q"]
+[ext_resource type="AudioStream" uid="uid://bwq3h54agf54k" path="res://death sound 2.mp3" id="6_5lp1q"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4o4bb"]
 texture = ExtResource("2_v7ae8")
@@ -103,6 +104,12 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/hover = SubResource("StyleBoxFlat_mr5c1")
 theme_override_styles/normal = SubResource("StyleBoxFlat_dc8b4")
 text = "Main menu"
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2394, 768.5)
+stream = ExtResource("6_5lp1q")
+volume_db = 24.0
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

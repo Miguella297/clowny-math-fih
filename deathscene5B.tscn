@@ -1,22 +1,166 @@
-[gd_scene format=3 uid="uid://ba45tq45gtapj"]
+[gd_scene load_steps=17 format=3 uid="uid://ba45tq45gtapj"]
+
+[ext_resource type="Script" uid="uid://btu0qo4yjw4wb" path="res://deathscene_5b.gd" id="1_6kku6"]
+[ext_resource type="Texture2D" uid="uid://642g0hfj351e" path="res://frog.png" id="1_v5l1m"]
+[ext_resource type="Texture2D" uid="uid://b5v0kn7qtnewx" path="res://franky.png" id="2_ih34l"]
+[ext_resource type="Texture2D" uid="uid://cjlokp3nlgo3" path="res://fishy2.png" id="3_6tm68"]
+[ext_resource type="Texture2D" uid="uid://x6rp6tiqu3g6" path="res://lake city.png" id="4_6kku6"]
+[ext_resource type="FontFile" uid="uid://cghgnj1h11o5v" path="res://Vito Bold.otf" id="5_6tm68"]
+[ext_resource type="FontFile" uid="uid://dewo183t8jt01" path="res://Bakso Menu TTF.ttf" id="6_6kku6"]
+[ext_resource type="AudioStream" uid="uid://bwq3h54agf54k" path="res://death sound 2.mp3" id="8_1b18h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1b18h"]
+texture = ExtResource("1_v5l1m")
+modulate_color = Color(0.753984, 0.753984, 0.753984, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibqqa"]
+texture = ExtResource("2_ih34l")
+modulate_color = Color(0.77084, 0.770839, 0.770839, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a23xi"]
+texture = ExtResource("3_6tm68")
+modulate_color = Color(0.762404, 0.762404, 0.762404, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i0ujj"]
+texture = ExtResource("4_6kku6")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1b18h"]
+bg_color = Color(0.172549, 0.913725, 0.839216, 0.337255)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.941176, 1, 0.054902, 1)
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibqqa"]
+bg_color = Color(0.235294, 0.54902, 0.882353, 0.364706)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.8, 1, 0.14902, 1)
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tm68"]
+bg_color = Color(0.264177, 0.66384, 0.726252, 0.290196)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(1, 0.94902, 0.117647, 1)
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6kku6"]
+bg_color = Color(0.247059, 0.631373, 0.898039, 0.458824)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.8, 1, 0.172549, 1)
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_6kku6")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 304.0
 offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1b18h")
 
 [node name="Panel2" type="Panel" parent="."]
 offset_left = 304.0
 offset_right = 604.0
 offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ibqqa")
 
 [node name="Panel3" type="Panel" parent="."]
 offset_left = 604.0
 offset_right = 881.0
 offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_a23xi")
 
 [node name="Panel4" type="Panel" parent="."]
 offset_left = 881.0
 offset_right = 1152.0
 offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_i0ujj")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 217.0
+offset_top = 43.0
+offset_right = 961.0
+offset_bottom = 162.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("5_6tm68")
+theme_override_font_sizes/font_size = 87
+text = "WELL WELL WELL "
+
+[node name="Button" type="Button" parent="."]
+offset_left = 191.0
+offset_top = 180.0
+offset_right = 966.0
+offset_bottom = 353.0
+theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.984314, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.992157, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_6kku6")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_1b18h")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ibqqa")
+text = "AGAIN (ya better)"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 191.0
+offset_top = 381.0
+offset_right = 967.0
+offset_bottom = 558.0
+theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_6kku6")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/hover = SubResource("StyleBoxFlat_6tm68")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6kku6")
+text = "Main menu FAHH"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2394, 768.5)
+stream = ExtResource("8_1b18h")
+volume_db = 24.0
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
